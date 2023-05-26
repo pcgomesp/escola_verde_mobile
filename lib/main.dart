@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       routes: {
-        //'/': (context) => const SplashScreen(),
-        '/': (context) => const MainMenu(),
+        '/': (context) => const SplashScreen(),
+        //'/': (context) => const MainMenu(),
       },
     );
   }
