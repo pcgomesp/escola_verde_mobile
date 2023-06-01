@@ -14,7 +14,7 @@ class MyThemes {
   }
 
   static TextStyle fontTextTitle(
-      {Color textColor = Colors.black, required double fontSize}) {
+      {Color textColor = Colors.white, required double fontSize}) {
     return GoogleFonts.kreon(
       fontSize: fontSize,
       fontWeight: FontWeight.w700,
