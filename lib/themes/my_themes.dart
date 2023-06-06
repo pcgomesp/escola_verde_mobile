@@ -25,7 +25,7 @@ class MyThemes {
   static TextStyle fontCardMainScreen(
       {Color textColor = const Color(0xFF474F40)}) {
     return GoogleFonts.kreon(
-      fontSize: 22,
+      fontSize: 21,
       fontWeight: FontWeight.w400,
       color: textColor,
     );

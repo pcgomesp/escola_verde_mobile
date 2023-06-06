@@ -1,3 +1,7 @@
+import 'dart:ffi';
+
+import 'package:escova_verde_mobile/views/widgets/home_button.dart';
+import 'package:escova_verde_mobile/views/widgets/home_who_button.dart';
 import 'package:flutter/material.dart';
 import 'package:escova_verde_mobile/themes/my_themes.dart';
 
@@ -15,39 +19,133 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: MyThemes.colorBars,
       body: Column(
         children: [
+          //Conteúdo da metade superior da tela
           Expanded(
-              flex: 1,
+              flex: 2,
               child: Container(
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage('assets/texture_fundo.png'),
+                  ),
+                ),
                 child: Stack(
                   children: [
                     Positioned(
                       bottom: 0,
-                      right: MediaQuery.of(context).size.width * 0.05,
+                      right: MediaQuery.of(context).size.width * 0.03,
                       child: Image.asset(
                         'assets/bcg_plants.png',
-                        height: 135,
+                        height: MediaQuery.of(context).size.height * 0.16,
                       ),
                     ),
                     Align(
                       alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Bem-vindo ao \nEscola Verde Mobile',
-                        style: MyThemes.fontTextTitle(fontSize: 38),
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.08,
+                          ),
+                          Text(
+                            'Bem-vindo ao \nEscola Verde Mobile',
+                            style: MyThemes.fontTextTitle(fontSize: 38),
+                          ),
+                        ],
                       ),
                     )
                   ],
                 ),
               )),
+          //Conteúdo da metade inferior da tela
           Expanded(
-              flex: 2,
-              child: Container(
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30),
-                      topRight: Radius.circular(30)),
+            flex: 5,
+            child: Container(
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30)),
+              ),
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: MediaQuery.of(context).size.width * 0.07),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.02,
+                      ),
+                      HomeWhoButton(),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.width * 0.08,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          HomeButton(
+                              titulo: 'Atividades',
+                              imagePath: 'assets/atividades.png',
+                              imageHeigth:
+                                  MediaQuery.of(context).size.height * 0.105,
+                              onTap: () {}),
+                          HomeButton(
+                              titulo: 'Eventos',
+                              imagePath: 'assets/eventos.png',
+                              imageHeigth:
+                                  MediaQuery.of(context).size.height * 0.09,
+                              onTap: () {}),
+                        ],
+                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.width * 0.08,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          HomeButton(
+                              titulo: 'Notícias',
+                              imagePath: 'assets/noticias.png',
+                              imageHeigth:
+                                  MediaQuery.of(context).size.height * 0.11,
+                              onTap: () {}),
+                          HomeButton(
+                              titulo: 'Contatos',
+                              imagePath: 'assets/contatos.png',
+                              imageHeigth:
+                                  MediaQuery.of(context).size.height * 0.09,
+                              onTap: () {}),
+                        ],
+                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.width * 0.08,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          HomeButton(
+                              titulo: 'Locais Visitados',
+                              imagePath: 'assets/visitados.png',
+                              imageHeigth:
+                                  MediaQuery.of(context).size.height * 0.11,
+                              onTap: () {}),
+                          HomeButton(
+                              titulo: 'Ensino Verde',
+                              imagePath: 'assets/ensino_verde.png',
+                              imageHeigth:
+                                  MediaQuery.of(context).size.height * 0.11,
+                              onTap: () {}),
+                        ],
+                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.width * 0.08,
+                      ),
+                    ],
+                  ),
                 ),
-              )),
+              ),
+            ),
+          ),
         ],
       ),
     );
