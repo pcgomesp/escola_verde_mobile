@@ -8,7 +8,9 @@ class HomeWhoButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+         Navigator.pushNamed(context, '/about-screen');
+      },
       child: Container(
         height: MediaQuery.of(context).size.height * 0.14,
         width: MediaQuery.of(context).size.width * 0.86,
