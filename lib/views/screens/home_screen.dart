@@ -1,5 +1,6 @@
 import 'dart:ffi';
 
+import 'package:escova_verde_mobile/views/screens/activity_screen.dart';
 import 'package:escova_verde_mobile/views/widgets/home_button.dart';
 import 'package:escova_verde_mobile/views/widgets/home_who_button.dart';
 import 'package:flutter/material.dart';
@@ -88,7 +89,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               imagePath: 'assets/atividades.png',
                               imageHeigth:
                                   MediaQuery.of(context).size.height * 0.105,
-                              onTap: () {}),
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context) => activity_screen()));
+                              }),
                           HomeButton(
                               titulo: 'Eventos',
                               imagePath: 'assets/eventos.png',
