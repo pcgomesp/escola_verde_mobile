@@ -1,4 +1,3 @@
-import 'package:escola_verde_mobile/views/widgets/custom_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:escola_verde_mobile/themes/my_themes.dart';
 
@@ -9,24 +8,19 @@ class AboutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFECEBE1),
-      /* appBar: AppBar(
-        title: Text(
-          'O Projeto',
-          style:
-          MyThemes.fontTextTitle(fontSize: 24)
-        ),
+      appBar: AppBar(
+        title: Text('O Projeto', style: MyThemes.fontTextTitle(fontSize: 24)),
         centerTitle: true,
         backgroundColor: MyThemes.colorBars,
         leading: IconButton(
-          icon:  Icon(Icons.menu),
+          icon: Icon(Icons.menu),
           iconSize: 35.0,
-          onPressed: (){},
+          onPressed: () {},
         ),
-        iconTheme:  IconThemeData(
+        iconTheme: IconThemeData(
           color: Colors.white,
         ),
-      ), */
-      appBar: CustomAppBar(),
+      ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
