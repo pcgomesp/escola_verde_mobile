@@ -1,10 +1,10 @@
 import 'dart:ffi';
 
-import 'package:escova_verde_mobile/views/screens/activity_screen.dart';
-import 'package:escova_verde_mobile/views/widgets/home_button.dart';
-import 'package:escova_verde_mobile/views/widgets/home_who_button.dart';
+import 'package:escola_verde_mobile/views/screens/activity_screen.dart';
+import 'package:escola_verde_mobile/views/widgets/home_button.dart';
+import 'package:escola_verde_mobile/views/widgets/home_who_button.dart';
 import 'package:flutter/material.dart';
-import 'package:escova_verde_mobile/themes/my_themes.dart';
+import 'package:escola_verde_mobile/themes/my_themes.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -90,7 +90,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               imageHeigth:
                                   MediaQuery.of(context).size.height * 0.105,
                               onTap: () {
-                                Navigator.of(context).push(MaterialPageRoute(builder: (context) => activity_screen()));
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => activity_screen()));
                               }),
                           HomeButton(
                               titulo: 'Eventos',
