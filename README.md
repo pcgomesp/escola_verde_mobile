@@ -1,16 +1,9 @@
-# escova_verde_mobile
+# Escola Verde Mobile
 
-A new Flutter project.
+Projeto em Flutter do aplicativo de divulgação do projeto de extensão ESCOLA VERDE, da UNIVASF.
 
-## Getting Started
+## Sobre o Projeto Escola Verde
 
-This project is a starting point for a Flutter application.
+"A Educação Ambiental (EA) pode ser desenvolvida e vivenciada de maneiras diferentes, sobretudo nas escolas, onde o ambiente é propício para a aprendizagem, o conhecimento e a mudança de comportamento. Muitas vezes, a promoção da EA nas escolas é dificultada pela pouca institucionalização da questão ambiental (...). O objetivo central do Projeto Escola Verde (PEV) é investigar estas dificuldades e promover ações no sentido de minimizar os problemas identificados, a partir da participação das comunidades escolares. Trata-se de uma Pesquisa Aplicada, do tipo Pesquisa-Ação, de caráter qualiquantitativo, que está sendo desenvolvida nas escolas de ensino fundamental, médio e superior da região do Vale do São Francisco. As atividades de pesquisa servem de embasamento e direcionamento das ações extensivas."
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Link do Projeto: https://escolaverde.org/site/
