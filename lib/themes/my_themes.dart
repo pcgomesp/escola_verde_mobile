@@ -4,9 +4,10 @@ import 'package:google_fonts/google_fonts.dart';
 class MyThemes {
   static Color colorScreen = const Color(0xFFECEBE1);
   static Color colorBars = const Color(0xFF74AB47);
-  static Color colorTextTitle= const Color(0xFF408844);
-  static Color colorTextBody= const  Color(0xFF000000);
+  static Color colorTextTitle = const Color(0xFF408844);
+  static Color colorTextBody = const Color(0xFF000000);
   static Color colorButton = const Color(0xFF94A737);
+  static Color colorTextMainScreen = const Color(0xFF474F40);
   static TextStyle fontTextBody({Color textColor = Colors.black}) {
     return GoogleFonts.kreon(
       fontSize: 17,
@@ -33,9 +34,10 @@ class MyThemes {
     );
   }
 
-  static TextStyle fontSideMenu({Color textColor = Colors.white}) {
+  static TextStyle fontSideMenu(
+      {Color textColor = Colors.white, double fontSize = 24}) {
     return GoogleFonts.kreon(
-      fontSize: 24,
+      fontSize: fontSize,
       fontWeight: FontWeight.w600,
       color: textColor,
     );
