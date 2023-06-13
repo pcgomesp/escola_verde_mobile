@@ -22,40 +22,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         color: Colors.white,
       ),
     );
-    /* drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            ListTile(
-              title: Text("Atividades",
-                  style: MyThemes.fontTextTitle(fontSize: 24)),
-            ),
-            ListTile(
-              title:
-                  Text("Eventos", style: MyThemes.fontTextTitle(fontSize: 24)),
-            ),
-            ListTile(
-              title: Text("Institucional",
-                  style: MyThemes.fontTextTitle(fontSize: 24)),
-            ),
-            ListTile(
-              title: Text("Locais Visitados",
-                  style: MyThemes.fontTextTitle(fontSize: 24)),
-            ),
-            ListTile(
-              title:
-                  Text("Notícias", style: MyThemes.fontTextTitle(fontSize: 24)),
-            ),
-            ListTile(
-              title: Text("Ensino Verde",
-                  style: MyThemes.fontTextTitle(fontSize: 24)),
-            ),
-            ListTile(
-              title:
-                  Text("Contatos", style: MyThemes.fontTextTitle(fontSize: 24)),
-            ),
-          ],
-        ),
-      ), */
   }
 }

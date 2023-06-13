@@ -10,19 +10,6 @@ class AboutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFECEBE1),
-      /* appBar: AppBar(
-        title: Text('O Projeto', style: MyThemes.fontTextTitle(fontSize: 24)),
-        centerTitle: true,
-        backgroundColor: MyThemes.colorBars,
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          iconSize: 35.0,
-          onPressed: () {},
-        ),
-        iconTheme: IconThemeData(
-          color: Colors.white,
-        ),
-      ), */
       appBar: const CustomAppBar('O Projeto'),
       drawer: const DrawerAppbar(),
       body: SingleChildScrollView(
