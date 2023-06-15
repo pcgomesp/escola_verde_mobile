@@ -98,7 +98,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               imagePath: 'assets/eventos.png',
                               imageHeigth:
                                   MediaQuery.of(context).size.height * 0.09,
-                              onTap: () {}),
+                              onTap: () {
+                                Navigator.pushNamed(context, '/event-screen');
+                              }),
                         ],
                       ),
                       SizedBox(

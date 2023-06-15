@@ -9,7 +9,7 @@ class HomeWhoButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-         Navigator.pushNamed(context, '/about-screen');
+        Navigator.pushNamed(context, '/about-screen');
       },
       child: Container(
         height: MediaQuery.of(context).size.height * 0.14,
@@ -44,7 +44,7 @@ class HomeWhoButton extends StatelessWidget {
                               width: MediaQuery.of(context).size.width * 0.04),
                           Text(
                             'O projeto, venha Saber\nquem somos',
-                            style: MyThemes.fontCardMainScreen(),
+                            style: MyThemes.kreonRegular(),
                           ),
                         ],
                       ),

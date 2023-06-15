@@ -25,10 +25,10 @@ class MyThemes {
     );
   }
 
-  static TextStyle fontCardMainScreen(
-      {Color textColor = const Color(0xFF474F40)}) {
+  static TextStyle kreonRegular(
+      {Color textColor = const Color(0xFF474F40), double fontSize = 21}) {
     return GoogleFonts.kreon(
-      fontSize: 21,
+      fontSize: fontSize,
       fontWeight: FontWeight.w400,
       color: textColor,
     );

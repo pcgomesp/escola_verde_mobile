@@ -19,7 +19,7 @@ class View_More_Button extends StatelessWidget {
         children: [
           Text('Ver mais',
               textScaleFactor: 1.1,
-              style: MyThemes.fontCardMainScreen(textColor: Colors.white)),
+              style: MyThemes.kreonRegular(textColor: Colors.white)),
           SizedBox(width: 5),
           Container(
             height: 25,

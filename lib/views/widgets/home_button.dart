@@ -20,7 +20,6 @@ class HomeButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        //Botão quem somos
         width: MediaQuery.of(context).size.width * 0.39,
         height: MediaQuery.of(context).size.height * 0.18,
         decoration: BoxDecoration(
@@ -42,7 +41,7 @@ class HomeButton extends StatelessWidget {
             ),
             Text(
               titulo,
-              style: MyThemes.fontCardMainScreen(),
+              style: MyThemes.kreonRegular(),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.005,

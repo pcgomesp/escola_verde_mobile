@@ -1,3 +1,4 @@
+import 'package:escola_verde_mobile/views/screens/event_screen.dart';
 import 'package:escola_verde_mobile/views/screens/home_screen.dart';
 //import 'package:escova_verde_mobile/views/screens/main_menu.dart';
 import 'package:escola_verde_mobile/views/screens/splash_screen.dart';
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const SplashScreen(),
         '/home-screen': (context) => const HomeScreen(),
         '/about-screen': (context) => const AboutScreen(),
+        '/event-screen': (context) => const EventScreen(),
         //'/': (context) => const MainMenu(),
       },
     );

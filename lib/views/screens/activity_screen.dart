@@ -29,7 +29,7 @@ class _activity_screenState extends State<activity_screen> {
           title: Center(
             child: Text(
               'Atividades',
-              style: MyThemes.fontCardMainScreen(textColor: Colors.white),
+              style: MyThemes.kreonRegular(textColor: Colors.white),
             ),
           )), //isso aqui não sei se esta de fato no meio
       body: SingleChildScrollView(
@@ -55,8 +55,7 @@ class _activity_screenState extends State<activity_screen> {
             // Arborização e jardinagem nas escolas
             Text(
               'Arborização e jardinagem nas escolas',
-              style: MyThemes.fontCardMainScreen(
-                  textColor: MyThemes.colorTextTitle),
+              style: MyThemes.kreonRegular(textColor: MyThemes.colorTextTitle),
             ), //Title
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
@@ -85,8 +84,7 @@ class _activity_screenState extends State<activity_screen> {
             //Coleta Seletiva nas escolas
             Text(
               'Coleta Seletiva nas escolas',
-              style: MyThemes.fontCardMainScreen(
-                  textColor: MyThemes.colorTextTitle),
+              style: MyThemes.kreonRegular(textColor: MyThemes.colorTextTitle),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
@@ -121,8 +119,7 @@ class _activity_screenState extends State<activity_screen> {
             //Reciclagem nas escolas
             Text(
               'Reciclagem nas escolas',
-              style: MyThemes.fontCardMainScreen(
-                  textColor: MyThemes.colorTextTitle),
+              style: MyThemes.kreonRegular(textColor: MyThemes.colorTextTitle),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
@@ -154,8 +151,7 @@ class _activity_screenState extends State<activity_screen> {
             //Mídia Ambiental e Capacitação de Professores
             Text(
               'Mídia Ambiental e Capacitação de Professores',
-              style: MyThemes.fontCardMainScreen(
-                  textColor: MyThemes.colorTextTitle),
+              style: MyThemes.kreonRegular(textColor: MyThemes.colorTextTitle),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
@@ -191,8 +187,7 @@ class _activity_screenState extends State<activity_screen> {
             //Eventos PEV
             Text(
               'Eventos PEV',
-              style: MyThemes.fontCardMainScreen(
-                  textColor: MyThemes.colorTextTitle),
+              style: MyThemes.kreonRegular(textColor: MyThemes.colorTextTitle),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
@@ -222,8 +217,7 @@ class _activity_screenState extends State<activity_screen> {
             //Saúde Ambiental nas escolas
             Text(
               'Saúde Ambiental nas escolas',
-              style: MyThemes.fontCardMainScreen(
-                  textColor: MyThemes.colorTextTitle),
+              style: MyThemes.kreonRegular(textColor: MyThemes.colorTextTitle),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
@@ -256,8 +250,7 @@ class _activity_screenState extends State<activity_screen> {
             //Compostagem, hortas e plantas medicinais nas escolas
             Text(
               'Compostagem, hortas e plantas medicinais nas escolas',
-              style: MyThemes.fontCardMainScreen(
-                  textColor: MyThemes.colorTextTitle),
+              style: MyThemes.kreonRegular(textColor: MyThemes.colorTextTitle),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
@@ -292,8 +285,7 @@ class _activity_screenState extends State<activity_screen> {
             //Ambientalização
             Text(
               'Ambientalização',
-              style: MyThemes.fontCardMainScreen(
-                  textColor: MyThemes.colorTextTitle),
+              style: MyThemes.kreonRegular(textColor: MyThemes.colorTextTitle),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
@@ -327,8 +319,7 @@ class _activity_screenState extends State<activity_screen> {
             //Visitas Técnicas Socioambientais
             Text(
               'Visitas Técnicas Socioambientais',
-              style: MyThemes.fontCardMainScreen(
-                  textColor: MyThemes.colorTextTitle),
+              style: MyThemes.kreonRegular(textColor: MyThemes.colorTextTitle),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
@@ -364,8 +355,7 @@ class _activity_screenState extends State<activity_screen> {
             //Arteducação Ambiental
             Text(
               'Arteducação Ambiental',
-              style: MyThemes.fontCardMainScreen(
-                  textColor: MyThemes.colorTextTitle),
+              style: MyThemes.kreonRegular(textColor: MyThemes.colorTextTitle),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
@@ -395,8 +385,7 @@ class _activity_screenState extends State<activity_screen> {
             //Pesquisa Documental precisa de dois botões para baixar pdf (sugestão do site "Documento 1" "Documento 2")
             Text(
               'Pesquisa Documental',
-              style: MyThemes.fontCardMainScreen(
-                  textColor: MyThemes.colorTextTitle),
+              style: MyThemes.kreonRegular(textColor: MyThemes.colorTextTitle),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
@@ -432,8 +421,7 @@ class _activity_screenState extends State<activity_screen> {
             //Pesquisa com Formulário
             Text(
               'Pesquisa com Formulário',
-              style: MyThemes.fontCardMainScreen(
-                  textColor: MyThemes.colorTextTitle),
+              style: MyThemes.kreonRegular(textColor: MyThemes.colorTextTitle),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
@@ -467,8 +455,7 @@ class _activity_screenState extends State<activity_screen> {
             //Pesquisa Survey
             Text(
               'Pesquisa Survey',
-              style: MyThemes.fontCardMainScreen(
-                  textColor: MyThemes.colorTextTitle),
+              style: MyThemes.kreonRegular(textColor: MyThemes.colorTextTitle),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
