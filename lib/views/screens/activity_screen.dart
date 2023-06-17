@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:escola_verde_mobile/themes/my_themes.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../widgets/custom_appbar.dart';
+
 class activity_screen extends StatefulWidget {
   const activity_screen({Key? key}) : super(key: key);
 
@@ -24,14 +26,7 @@ class _activity_screenState extends State<activity_screen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyThemes.colorScreen,
-      appBar: AppBar(
-          backgroundColor: MyThemes.colorBars,
-          title: Center(
-            child: Text(
-              'Atividades',
-              style: MyThemes.kreonRegular(textColor: Colors.white),
-            ),
-          )), //isso aqui não sei se esta de fato no meio
+      appBar:const CustomAppBar('Atividades'), //isso aqui não sei se esta de fato no meio
       body: SingleChildScrollView(
         padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
         child: Column(
