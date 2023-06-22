@@ -11,7 +11,7 @@ void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   runApp(DevicePreview(
-    enabled: true,
+    enabled: false,
     builder: (context) => MyApp(),
   ));
   //runApp(const MyApp());
