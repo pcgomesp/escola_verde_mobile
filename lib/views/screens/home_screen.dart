@@ -29,135 +29,14 @@ class _HomeScreenState extends State<HomeScreen> {
   bool get _isSliverAppBarExpanded {
     return _scrollController.hasClients &&
         _scrollController.offset >
-            (MediaQuery.of(context).size.height * 0.25 - kToolbarHeight);
+            (MediaQuery.of(context).size.height * 0.20 - kToolbarHeight);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: MyThemes.colorBars,
-        body: CustomScrollView(
-          controller: _scrollController,
-          slivers: [
-            SliverAppBar(
-              collapsedHeight: MediaQuery.of(context).size.height * 0.10,
-              pinned: true,
-              backgroundColor: MyThemes.colorBars,
-              expandedHeight: MediaQuery.of(context).size.height * 0.28,
-              flexibleSpace: FlexibleSpaceBar(
-                centerTitle: true,
-                title: _isSliverAppBarExpanded
-                    ? Text(
-                        'Bem-vindo',
-                        style: MyThemes.fontTextTitle(fontSize: 38),
-                      )
-                    : null,
-                background: Image.asset(
-                  'assets/Image_HomePage.png',
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-            SliverToBoxAdapter(
-              child: Container(
-                width: double.infinity,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30),
-                      topRight: Radius.circular(30)),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: MediaQuery.of(context).size.width * 0.07),
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.02,
-                        ),
-                        HomeWhoButton(),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.width * 0.08,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            HomeButton(
-                                titulo: 'Atividades',
-                                imagePath: 'assets/atividades.png',
-                                imageHeigth:
-                                    MediaQuery.of(context).size.height * 0.105,
-                                onTap: () {
-                                  Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => activity_screen()));
-                                }),
-                            HomeButton(
-                                titulo: 'Eventos',
-                                imagePath: 'assets/eventos.png',
-                                imageHeigth:
-                                    MediaQuery.of(context).size.height * 0.09,
-                                onTap: () {
-                                  Navigator.pushNamed(context, '/event-screen');
-                                }),
-                          ],
-                        ),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.width * 0.08,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            HomeButton(
-                                titulo: 'Notícias',
-                                imagePath: 'assets/noticias.png',
-                                imageHeigth:
-                                    MediaQuery.of(context).size.height * 0.11,
-                                onTap: () {
-                                  Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => News_screen()));
-                                }),
-                            HomeButton(
-                                titulo: 'Contatos',
-                                imagePath: 'assets/contatos.png',
-                                imageHeigth:
-                                    MediaQuery.of(context).size.height * 0.09,
-                                onTap: () {}),
-                          ],
-                        ),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.width * 0.08,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            HomeButton(
-                                titulo: 'Locais Visitados',
-                                imagePath: 'assets/visitados.png',
-                                imageHeigth:
-                                    MediaQuery.of(context).size.height * 0.11,
-                                onTap: () {}),
-                            HomeButton(
-                                titulo: 'Ensino Verde',
-                                imagePath: 'assets/ensino_verde.png',
-                                imageHeigth:
-                                    MediaQuery.of(context).size.height * 0.11,
-                                onTap: () {}),
-                          ],
-                        ),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.width * 0.08,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            )
-          ],
-        )
-/*      
-      Column(
+      backgroundColor: MyThemes.colorBars,
+      body: Column(
         children: [
           //Conteúdo da metade superior da tela
           Expanded(
@@ -253,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               imagePath: 'assets/noticias.png',
                               imageHeigth:
                                   MediaQuery.of(context).size.height * 0.11,
-                              onTap: (){
+                              onTap: () {
                                 Navigator.of(context).push(MaterialPageRoute(
                                     builder: (context) => News_screen()));
                               }),
@@ -295,7 +174,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         ],
-      ),*/
-        );
+      ),
+    );
   }
 }

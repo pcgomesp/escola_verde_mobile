@@ -5,11 +5,16 @@ import 'package:escola_verde_mobile/views/screens/splash_screen.dart';
 import 'package:escola_verde_mobile/views/screens/about_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:device_preview/device_preview.dart';
 
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  runApp(const MyApp());
+  runApp(DevicePreview(
+    enabled: true,
+    builder: (context) => MyApp(),
+  ));
+  //runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
