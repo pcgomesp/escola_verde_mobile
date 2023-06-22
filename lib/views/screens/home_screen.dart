@@ -15,23 +15,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  late ScrollController _scrollController;
-
-  void initState() {
-    super.initState();
-
-    _scrollController = ScrollController()
-      ..addListener(() {
-        setState(() {});
-      });
-  }
-
-  bool get _isSliverAppBarExpanded {
-    return _scrollController.hasClients &&
-        _scrollController.offset >
-            (MediaQuery.of(context).size.height * 0.20 - kToolbarHeight);
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
