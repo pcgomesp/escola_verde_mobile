@@ -41,7 +41,7 @@ class HomeButton extends StatelessWidget {
             ),
             Text(
               titulo,
-              style: MyThemes.kreonRegular(),
+              style: MyThemes.kreonRegular(fontSize: 19),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.005,
