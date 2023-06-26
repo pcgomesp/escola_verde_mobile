@@ -13,6 +13,10 @@ class View_More_Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressed,
+      style: ButtonStyle(
+        alignment: Alignment.centerLeft,
+        backgroundColor: MaterialStatePropertyAll(MyThemes.colorButton),
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         mainAxisSize: MainAxisSize.min,
@@ -20,17 +24,13 @@ class View_More_Button extends StatelessWidget {
           Text('Ver mais',
               textScaleFactor: 1.1,
               style: MyThemes.kreonRegular(textColor: Colors.white)),
-          SizedBox(width: 5),
-          Container(
+          const SizedBox(width: 5),
+          SizedBox(
             height: 25,
             width: 25,
             child: Image.asset('assets/setas.png'),
           ),
         ],
-      ),
-      style: ButtonStyle(
-        alignment: Alignment.centerLeft,
-        backgroundColor: MaterialStatePropertyAll(MyThemes.colorButton),
       ),
     );
   }
