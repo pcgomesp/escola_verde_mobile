@@ -1,5 +1,8 @@
 import 'package:escola_verde_mobile/themes/my_themes.dart';
+import 'package:escola_verde_mobile/views/screens/act_extension_screen.dart';
 import 'package:flutter/material.dart';
+
+import '../screens/activity_screen.dart';
 
 class DrawerAppbar extends StatelessWidget {
   const DrawerAppbar({super.key});
@@ -15,7 +18,14 @@ class DrawerAppbar extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.12,
           ),
           menuOption("Atividades", allChildren: [
-            subMenuOption('Extensão'),
+            subMenuOption('Geral', tap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const activity_screen()));
+            }),
+            subMenuOption('Extensão', tap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const ActExtensionScreen()));
+            }),
             subMenuOption('Pesquisa'),
             subMenuOption('Ensino'),
             subMenuOption('Produtos'),
