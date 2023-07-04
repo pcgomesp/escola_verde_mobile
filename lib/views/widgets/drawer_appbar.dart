@@ -3,6 +3,8 @@ import 'package:escola_verde_mobile/views/screens/act_extension_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../screens/activity_screen.dart';
+import '../screens/inst_nucleus_screen.dart';
+import '../screens/inst_group_screen.dart';
 
 class DrawerAppbar extends StatelessWidget {
   const DrawerAppbar({super.key});
@@ -41,8 +43,14 @@ class DrawerAppbar extends StatelessWidget {
             subMenuOption('Programa Escola Verde'),
             subMenuOption('Revista Verde'),
             subMenuOption('Estágio'),
-            subMenuOption('Grupo de Pesquisa'),
-            subMenuOption('Núcleo Temático'),
+            subMenuOption('Grupo de Pesquisa', tap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const Inst_group_screen()));
+            }),
+            subMenuOption('Núcleo Temático', tap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const Inst_nucleus_screen()));
+            }),
             subMenuOption('Sala Verde'),
           ]),
           const Padding(padding: EdgeInsets.only(top: 7.0)),
