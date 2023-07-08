@@ -8,6 +8,8 @@ import 'package:escola_verde_mobile/views/widgets/home_who_button.dart';
 import 'package:flutter/material.dart';
 import 'package:escola_verde_mobile/themes/my_themes.dart';
 
+import 'links_sceen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -172,6 +174,19 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         SizedBox(
                           height: MediaQuery.of(context).size.width * 0.08,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            HomeButton(
+                                titulo: 'Links Uteis',
+                                imagePath: 'assets/links_uteis.png',
+                                imageHeigth:
+                                MediaQuery.of(context).size.height * 0.11,
+                                onTap: () {Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => Links_screen()));}),
+
+                          ],
                         ),
                       ],
                     ),
