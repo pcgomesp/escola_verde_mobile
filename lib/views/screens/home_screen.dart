@@ -2,6 +2,7 @@ import 'dart:ffi' as size;
 
 import 'package:escola_verde_mobile/views/screens/activity_screen.dart';
 import 'package:escola_verde_mobile/views/screens/contact_screen.dart';
+import 'package:escola_verde_mobile/views/screens/form_screen.dart';
 import 'package:escola_verde_mobile/views/screens/news_screen.dart';
 import 'package:escola_verde_mobile/views/widgets/home_button.dart';
 import 'package:escola_verde_mobile/views/widgets/home_who_button.dart';
@@ -176,7 +177,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           height: MediaQuery.of(context).size.width * 0.08,
                         ),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             HomeButton(
                                 titulo: 'Links Uteis',
@@ -185,7 +186,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                 MediaQuery.of(context).size.height * 0.11,
                                 onTap: () {Navigator.of(context).push(MaterialPageRoute(
                                     builder: (context) => Links_screen()));}),
-
+                            HomeButton(
+                                titulo: 'Formulario',
+                                imagePath: 'assets/foms2.png',
+                                imageHeigth:
+                                MediaQuery.of(context).size.height * 0.11,
+                                onTap: () {Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => Form_screen()));}),
                           ],
                         ),
                       ],
