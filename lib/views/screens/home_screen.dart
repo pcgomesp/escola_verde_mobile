@@ -149,8 +149,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                 imagePath: 'assets/contatos.png',
                                 imageHeigth:
                                     MediaQuery.of(context).size.height * 0.09,
-                                onTap: () {Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => Contact_screen()));}),
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => Contact_screen()));
+                                }),
                           ],
                         ),
                         SizedBox(
@@ -183,18 +185,25 @@ class _HomeScreenState extends State<HomeScreen> {
                                 titulo: 'Links Uteis',
                                 imagePath: 'assets/links_uteis.png',
                                 imageHeigth:
-                                MediaQuery.of(context).size.height * 0.11,
-                                onTap: () {Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => Links_screen()));}),
+                                    MediaQuery.of(context).size.height * 0.11,
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => Links_screen()));
+                                }),
                             HomeButton(
                                 titulo: 'Formulario',
                                 imagePath: 'assets/foms2.png',
                                 imageHeigth:
-                                MediaQuery.of(context).size.height * 0.11,
-                                onTap: () {Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => Form_screen()));}),
+                                    MediaQuery.of(context).size.height * 0.11,
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => Form_screen()));
+                                }),
                           ],
                         ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.width * 0.08,
+                        )
                       ],
                     ),
                   ),
