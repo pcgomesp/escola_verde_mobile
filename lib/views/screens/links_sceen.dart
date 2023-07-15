@@ -15,51 +15,52 @@ class Links_screen extends StatefulWidget {
 }
 
 class _Links_screenState extends State<Links_screen> {
-
   void launchExternalWebsite(String url) async {
     var urlUri = Uri.parse(url);
     if (await canLaunchUrl(urlUri)) {
       await launchUrl(urlUri, mode: LaunchMode.externalApplication);
     } else {
       throw 'could not lanch $urlUri';
-
     }
   }
+
   @override
-  Widget build (BuildContext context) {
-     return  Scaffold(
-       appBar: CustomAppBar('Links úteis'),
-       drawer:  DrawerAppbar(),
-       body: SingleChildScrollView(
-         child: Center(
-           child: Column(
-
-             children: [
-               SizedBox(height: 15,),
-               Text(
-                 'Somos um movimento de mobilização para encarar problemas socioambientais.',
-                 style: MyThemes.fontTextBody(textColor: MyThemes.colorTextBody),
-                 textAlign: TextAlign.center,
-               ),
-               Column(
-                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
-                 children: links_list
-                     .map((Link) => Link_button(
-                   titulo: Link.titulo,
-                   imagePath: Link.imagePath,
-                   url: Link.url,
-                   imageHeigth:  MediaQuery.of(context).size.height * 0.10,))
-                     .toList(),
-               ),
-             ],
-           ),
-         ),
-       ),
-       backgroundColor: MyThemes.colorScreen,
-
-     );
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: CustomAppBar('Links úteis'),
+      drawer: DrawerAppbar(),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 15,
+              ),
+              Text(
+                'Somos um movimento de mobilização e transformação pedagógica e colaborativa '
+                'de escolas e comunidades no enfrentamento problemas socioambientais.'
+                ' Aqui estão alguns dos vários produtos produzidos, com esse propósito,'
+                ' feitos pelos colaboradoes do projeto',
+                style: MyThemes.fontTextBody(textColor: MyThemes.colorTextBody),
+                textAlign: TextAlign.center,
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: links_list
+                    .map((Link) => Link_button(
+                          titulo: Link.titulo,
+                          imagePath: Link.imagePath,
+                          url: Link.url,
+                          imageHeigth:
+                              MediaQuery.of(context).size.height * 0.10,
+                        ))
+                    .toList(),
+              ),
+            ],
+          ),
+        ),
+      ),
+      backgroundColor: MyThemes.colorScreen,
+    );
   }
 }
-
-
