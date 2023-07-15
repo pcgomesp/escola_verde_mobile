@@ -2,6 +2,7 @@ import 'dart:ffi' as size;
 
 import 'package:escola_verde_mobile/views/screens/activity_screen.dart';
 import 'package:escola_verde_mobile/views/screens/contact_screen.dart';
+import 'package:escola_verde_mobile/views/screens/explaining_form_screen.dart';
 import 'package:escola_verde_mobile/views/screens/form_screen.dart';
 import 'package:escola_verde_mobile/views/screens/news_screen.dart';
 import 'package:escola_verde_mobile/views/widgets/home_button.dart';
@@ -197,7 +198,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                     MediaQuery.of(context).size.height * 0.11,
                                 onTap: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => Form_screen()));
+                                      builder: (context) =>
+                                          const ExpFormScreen()));
+                                  //builder: (context) => Form_screen()));
                                 }),
                           ],
                         ),
