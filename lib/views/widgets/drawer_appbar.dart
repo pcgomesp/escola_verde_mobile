@@ -26,14 +26,17 @@ class DrawerAppbar extends StatelessWidget {
           ),
           menuOption("Atividades", allChildren: [
             subMenuOption('Geral', tap: () {
+              Navigator.pop(context);
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => const activity_screen()));
             }),
             subMenuOption('Extensão', tap: () {
+              Navigator.pop(context);
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => const ActExtensionScreen()));
             }),
             subMenuOption('Pesquisa', tap: () {
+              Navigator.pop(context);
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => const ActResearchScreen()));
             }),
@@ -49,26 +52,32 @@ class DrawerAppbar extends StatelessWidget {
           const Padding(padding: EdgeInsets.only(top: 7.0)),
           menuOption('Institucional', allChildren: [
             subMenuOption('Programa Escola Verde', tap: () {
+              Navigator.pop(context);
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => const Inst_program_screen()));
             }),
             subMenuOption('Revista Verde', tap: () {
+              Navigator.pop(context);
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => const Inst_greenmagazine_screen()));
             }),
             subMenuOption('Estágio', tap: () {
+              Navigator.pop(context);
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => const Inst_internship_screen()));
             }),
             subMenuOption('Grupo de Pesquisa', tap: () {
+              Navigator.pop(context);
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => const Inst_group_screen()));
             }),
             subMenuOption('Núcleo Temático', tap: () {
+              Navigator.pop(context);
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => const Inst_nucleus_screen()));
             }),
             subMenuOption('Sala Verde', tap: () {
+              Navigator.pop(context);
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => const Inst_greenroom_screen()));
             }),
