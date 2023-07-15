@@ -5,6 +5,7 @@ import 'package:escola_verde_mobile/views/screens/inst_greenmagazine_screen.dart
 import 'package:escola_verde_mobile/views/screens/inst_greenroom_screen.dart';
 import 'package:escola_verde_mobile/views/screens/inst_internship_screen.dart';
 import 'package:escola_verde_mobile/views/screens/inst_program_screen.dart';
+import 'package:escola_verde_mobile/views/screens/event_certificate_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../screens/activity_screen.dart';
@@ -46,7 +47,11 @@ class DrawerAppbar extends StatelessWidget {
           ]),
           const Padding(padding: EdgeInsets.only(top: 7.0)),
           menuOption('Eventos', allChildren: [
-            subMenuOption('Certificados'),
+            subMenuOption('Certificados', tap: () {
+              Navigator.pop(context);
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const Event_certificate_screen()));
+            }),
             subMenuOption('Promovidos pelo PEV')
           ]),
           const Padding(padding: EdgeInsets.only(top: 7.0)),
