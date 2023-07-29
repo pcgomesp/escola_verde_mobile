@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:escola_verde_mobile/models/post_model.dart';
 import 'package:escola_verde_mobile/views/screens/event_screen.dart';
 import 'package:escola_verde_mobile/views/screens/home_screen.dart';
@@ -23,16 +25,29 @@ void main() async {
   );
 
   var result = await pool.execute(
-      " SELECT * FROM `wp_posts` WHERE post_status = 'publish' and post_type = 'post' and ID=119 ");
+      " SELECT * FROM `wp_posts` WHERE post_status = 'publish' and post_type = 'post' and ID=439 ");
+  late PostModel post;
 
   for (final row in result.rows) {
-    PostModel post = PostModel.parse(row);
+    post = PostModel.parse(row);
     print(post.id);
     print(post.author);
     print(post.date);
-    print(post.title);
-    print(post.content);
   }
+
+  Future<List<String?>> getImages({required PostModel post}) async {
+    List<String?> ImgUrls = [];
+    var resultimages = await pool.execute(
+        "SELECT * FROM wp_posts WHERE post_status = 'inherit' and post_type = 'attachment' and post_parent = :pp",
+        {"pp": post.id});
+    for (final row in resultimages.rows) {
+      ImgUrls.add(row.colByName('guid'));
+    }
+    print(ImgUrls);
+    return ImgUrls;
+  }
+
+  getImages(post: post);
 
   runApp(DevicePreview(
     enabled: false,
