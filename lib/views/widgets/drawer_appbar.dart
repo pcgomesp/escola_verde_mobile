@@ -1,5 +1,11 @@
 import 'package:escola_verde_mobile/themes/my_themes.dart';
 import 'package:escola_verde_mobile/views/screens/act_extension_screen.dart';
+import 'package:escola_verde_mobile/views/screens/act_research_screen.dart';
+import 'package:escola_verde_mobile/views/screens/inst_greenmagazine_screen.dart';
+import 'package:escola_verde_mobile/views/screens/inst_greenroom_screen.dart';
+import 'package:escola_verde_mobile/views/screens/inst_internship_screen.dart';
+import 'package:escola_verde_mobile/views/screens/inst_program_screen.dart';
+import 'package:escola_verde_mobile/views/screens/event_certificate_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../screens/activity_screen.dart';
@@ -21,37 +27,65 @@ class DrawerAppbar extends StatelessWidget {
           ),
           menuOption("Atividades", allChildren: [
             subMenuOption('Geral', tap: () {
+              Navigator.pop(context);
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => const activity_screen()));
             }),
             subMenuOption('Extensão', tap: () {
+              Navigator.pop(context);
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => const ActExtensionScreen()));
             }),
-            subMenuOption('Pesquisa'),
+            subMenuOption('Pesquisa', tap: () {
+              Navigator.pop(context);
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const ActResearchScreen()));
+            }),
             subMenuOption('Ensino'),
             subMenuOption('Produtos'),
             subMenuOption('Galeria de Fotos')
           ]),
           const Padding(padding: EdgeInsets.only(top: 7.0)),
           menuOption('Eventos', allChildren: [
-            subMenuOption('Certificados'),
+            subMenuOption('Certificados', tap: () {
+              Navigator.pop(context);
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const Event_certificate_screen()));
+            }),
             subMenuOption('Promovidos pelo PEV')
           ]),
           const Padding(padding: EdgeInsets.only(top: 7.0)),
           menuOption('Institucional', allChildren: [
-            subMenuOption('Programa Escola Verde'),
-            subMenuOption('Revista Verde'),
-            subMenuOption('Estágio'),
+            subMenuOption('Programa Escola Verde', tap: () {
+              Navigator.pop(context);
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const Inst_program_screen()));
+            }),
+            subMenuOption('Revista Verde', tap: () {
+              Navigator.pop(context);
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const Inst_greenmagazine_screen()));
+            }),
+            subMenuOption('Estágio', tap: () {
+              Navigator.pop(context);
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const Inst_internship_screen()));
+            }),
             subMenuOption('Grupo de Pesquisa', tap: () {
+              Navigator.pop(context);
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => const Inst_group_screen()));
             }),
             subMenuOption('Núcleo Temático', tap: () {
+              Navigator.pop(context);
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => const Inst_nucleus_screen()));
             }),
-            subMenuOption('Sala Verde'),
+            subMenuOption('Sala Verde', tap: () {
+              Navigator.pop(context);
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const Inst_greenroom_screen()));
+            }),
           ]),
           const Padding(padding: EdgeInsets.only(top: 7.0)),
           menuOption('Locais Visitados', allChildren: [

@@ -213,16 +213,21 @@ class _activity_screenState extends State<activity_screen> {
               ' e analítico das atividades.',
               style: MyThemes.fontTextBody(textColor: MyThemes.colorTextBody),
             ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.01,
-            ),
+
             Container(
               alignment: Alignment.centerRight,
-              child: View_More_Button(
-                  onPressed: () => setState(() {
-                        launchExternalWebsite(
-                            "https://escolaverde.org/site/wp-content/uploads/2015/06/Pesquisa-documental-1.pdf");
-                      })),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TextButton(onPressed:  ()=> setState(() {launchExternalWebsite("https://escolaverde.org/site/wp-content/uploads/2015/06/Pesquisa-documental-1.pdf");}),
+                      child: Text("Documento 1",
+                        style: MyThemes.fontSideMenu(textColor: Color.fromRGBO(56, 106,0, 1), fontSize: 15),)),
+
+                  TextButton(onPressed: ()=> setState(() {launchExternalWebsite("https://escolaverde.org/site/wp-content/uploads/2015/06/Pesquisa-documental.pdf");}),
+                      child: Text("Documento 2",
+                      style:  MyThemes.fontSideMenu(textColor: Color.fromRGBO(56, 106,0, 1), fontSize: 15),)),
+                ],
+              ),
             ), //precisa de outro botão
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
