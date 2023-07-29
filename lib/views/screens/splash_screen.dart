@@ -1,4 +1,5 @@
 import 'package:escola_verde_mobile/views/screens/home_screen.dart';
+import 'package:escola_verde_mobile/views/screens/testeMySql.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
@@ -33,6 +34,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return HomeScreen();
+    return TesteMySql();
   }
 }
