@@ -30,9 +30,6 @@ void main() async {
 
   for (final row in result.rows) {
     post = PostModel.parse(row);
-    print(post.id);
-    print(post.author);
-    print(post.date);
   }
 
   Future<List<String?>> getImages({required PostModel post}) async {
