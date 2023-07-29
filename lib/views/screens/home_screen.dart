@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
               expandedHeight:
                   MediaQuery.of(context).size.height * 0.28, //tamanho
               flexibleSpace: FlexibleSpaceBar(
-                  titlePadding: EdgeInsets.only(top: 3),
+                  titlePadding: const EdgeInsets.only(top: 3),
                   centerTitle: true,
                   expandedTitleScale: 1.2,
                   title: Column(
