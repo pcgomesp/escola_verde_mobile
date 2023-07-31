@@ -10,18 +10,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:mysql_client/mysql_client.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  await dotenv.load(fileName: ".env");
 
   final pool = MySQLConnectionPool(
-    ***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
+    host: dotenv.get('HOST_EV'),
+    port: int.parse(dotenv.get('PORT_EV')),
+    userName: dotenv.get('USER_EV'),
+    password: dotenv.get('PASS_EV'),
+    maxConnections: int.parse(dotenv.get('MAX_CONNEC_EV')),
+    databaseName: dotenv.get('DATABASE_WP_EV'),
   );
 
   var result = await pool.execute(
