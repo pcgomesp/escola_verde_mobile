@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 import '../screens/activity_screen.dart';
 import '../screens/inst_nucleus_screen.dart';
 import '../screens/inst_group_screen.dart';
+import '../screens/mysql_news.dart';
 
 class DrawerAppbar extends StatelessWidget {
   const DrawerAppbar({super.key});
@@ -98,7 +99,11 @@ class DrawerAppbar extends StatelessWidget {
           ]),
           const Padding(padding: EdgeInsets.only(top: 7.0)),
           menuOption('Notícias', allChildren: [
-            subMenuOption('Notícias Atuais'),
+            subMenuOption('Notícias Atuais', tap: () {
+              Navigator.pop(context);
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const MySQLNews()));
+            }),
             subMenuOption('Notícias Anteriores'),
           ]),
           const Padding(padding: EdgeInsets.only(top: 7.0)),
