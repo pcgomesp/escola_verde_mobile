@@ -23,7 +23,7 @@ class AllNewsFromWordpressModel {
       {required PostModel post, required MySQLConnectionPool pool}) async {
     List<String?> ImgUrls = [];
     var resultimages = await pool.execute(
-        "SELECT * FROM wp_posts WHERE post_status = 'inherit' and post_type = 'attachment' and post_parent = :pp",
+        "SELECT * FROM wp_posts WHERE post_status = 'inherit' and post_type = 'attachment' and post_parent = :pp ORDER BY `wp_posts`.`post_date` ASC",
         {"pp": post.id});
     for (final row in resultimages.rows) {
       ImgUrls.add(row.colByName('guid'));
