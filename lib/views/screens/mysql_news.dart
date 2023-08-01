@@ -1,6 +1,8 @@
+import 'package:escola_verde_mobile/models/wp_news_model.dart';
 import 'package:escola_verde_mobile/models/post_model.dart';
 import 'package:escola_verde_mobile/views/widgets/event_button.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../../models/event_model.dart';
 import '../widgets/custom_appbar.dart';
 import '../widgets/drawer_appbar.dart';
@@ -31,7 +33,7 @@ class _MySQLNewsState extends State<MySQLNews> {
       appBar: const CustomAppBar('Notícias'),
       drawer: const DrawerAppbar(),
       body: FutureBuilder(
-        future: getAllNews(pool),
+        future: AllNewsFromWordpressModel().getAllNews(pool),
         builder: (context, snapshot) {
           List<Widget> children = [];
           if (snapshot.hasData) {
@@ -44,7 +46,8 @@ class _MySQLNewsState extends State<MySQLNews> {
                   date: DateTime.parse(helper.date!)));
             }
           } else if (snapshot.hasError) {
-            return Text("deu erro");
+            return Text(
+                "deu erro"); // Colocar Widget do Throw exception aqui também
           } else {
             children = const <Widget>[
               SizedBox(
@@ -71,7 +74,7 @@ class _MySQLNewsState extends State<MySQLNews> {
     );
   }
 
-  Future<List<PostModel>> getAllNews(MySQLConnectionPool pool) async {
+/*   Future<List<PostModel>> getAllNews(MySQLConnectionPool pool) async {
     var allPosts = await pool.execute(
         "SELECT * FROM `wp_posts` WHERE post_status = 'publish' and post_type = 'post' ORDER BY `wp_posts`.`post_date` DESC");
     List<PostModel> news = [];
@@ -84,7 +87,7 @@ class _MySQLNewsState extends State<MySQLNews> {
     print("news");
     return news;
   }
-
+ */
   /* for (final row in result.rows) {
     post = PostModel.parse(row);
   }
