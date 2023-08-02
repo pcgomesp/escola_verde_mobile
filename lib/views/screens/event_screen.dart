@@ -28,7 +28,7 @@ class _EventScreenState extends State<EventScreen> {
                   titulo: evento.title,
                   imagePath: evento.imagePath,
                   onTap: () {},
-                  date: evento.date))
+                  date: 'testes' /*evento.date*/))
               .toList(),
         ),
       ),

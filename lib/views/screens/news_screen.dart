@@ -24,10 +24,10 @@ class _News_screenState extends State<News_screen> {
         child: Column(
           children: news_list
               .map((evento) => EventButton(
-              titulo: evento.title,
-              imagePath: evento.imagePath,
-              onTap: () {},
-              date: evento.date))
+                  titulo: evento.title,
+                  imagePath: evento.imagePath,
+                  onTap: () {},
+                  date: 'Teste'))
               .toList(),
         ),
       ),

@@ -141,8 +141,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 imageHeigth:
                                     MediaQuery.of(context).size.height * 0.11,
                                 onTap: () {
-                                  Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => News_screen()));
+                                  Navigator.pushNamed(context, '/new-screen');
                                 }),
                             HomeButton(
                                 titulo: 'Contatos',

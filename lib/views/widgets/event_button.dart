@@ -15,7 +15,7 @@ class EventButton extends StatelessWidget {
   final String titulo;
   final String imagePath;
   final void Function() onTap;
-  final DateTime date;
+  final String date;
 
   @override
   Widget build(BuildContext context) {
@@ -58,9 +58,9 @@ class EventButton extends StatelessWidget {
                           textColor: Colors.black, fontSize: 12),
                     ),
                     Text(
-                      DateFormat("dd 'de' MMMM 'de' yyyy", "pt_BR")
-                          .format(date),
-                      //DateFormat.,
+                      date,
+                      /*DateFormat("dd 'de' MMMM 'de' yyyy", "pt_BR")
+                          .format(date),*/
                       style: MyThemes.kreonRegular(
                           textColor: const Color(0xFF636363), fontSize: 12),
                     ),
