@@ -70,20 +70,4 @@ class _MySQLNewsState extends State<MySQLNews> {
             ),
     );
   }
-
-  /* for (final row in result.rows) {
-    post = PostModel.parse(row);
-  }
-
-  Future<List<String?>> getImages({required PostModel post}) async {
-    List<String?> ImgUrls = [];
-    var resultimages = await pool.execute(
-        "SELECT * FROM wp_posts WHERE post_status = 'inherit' and post_type = 'attachment' and post_parent = :pp",
-        {"pp": post.id});
-    for (final row in resultimages.rows) {
-      ImgUrls.add(row.colByName('guid'));
-    }
-    print(ImgUrls);
-    return ImgUrls;
-  } */
 }
