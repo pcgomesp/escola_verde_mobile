@@ -30,14 +30,17 @@ class _MySQLNewsState extends State<MySQLNews> {
   }
 
   Future<void> _fetchPage(int pageKey) async {
+    print("oi estou aqui, pagekey é:");
+    print(pageKey);
     try {
-      posts = await PostData.getPosts();
-      final isLastPage = posts.length < _pageSize;
+      final newItems =
+          await PostData.getPosts(howManyNews: _pageSize, currentPage: pageKey);
+      final isLastPage = newItems.length < _pageSize;
       if (isLastPage) {
-        _pagingController.appendLastPage(posts);
+        _pagingController.appendLastPage(newItems);
       } else {
-        final nextPageKey = pageKey + posts.length;
-        _pagingController.appendPage(posts, nextPageKey);
+        final nextPageKey = pageKey + newItems.length;
+        _pagingController.appendPage(newItems, nextPageKey);
       }
     } catch (error) {
       _pagingController.error = error;
@@ -53,7 +56,24 @@ class _MySQLNewsState extends State<MySQLNews> {
       body: PagedListView<int, PostModel>(
         pagingController: _pagingController,
         builderDelegate: PagedChildBuilderDelegate<PostModel>(
+            itemBuilder: (context, item, index) =>
+                EventButton.parse(posts[index])),
+      ),
+    );
+  }
+
+  /* @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: const CustomAppBar('Notícias do Site'),
+      drawer: const DrawerAppbar(),
+      body: PagedListView<int, PostModel>(
+        pagingController: _pagingController,
+        builderDelegate: PagedChildBuilderDelegate<PostModel>(
             itemBuilder: (context, item, index) {
+          print("o item é");
+          print(item);
           return EventButton(
               titulo: posts[index].title!,
               imagePath: '',
@@ -62,7 +82,7 @@ class _MySQLNewsState extends State<MySQLNews> {
         }),
       ),
     );
-  }
+  } */
 
   /* @override
   Widget build(BuildContext context) => PagedListView<int, PostModel>(

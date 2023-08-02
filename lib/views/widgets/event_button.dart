@@ -1,3 +1,4 @@
+import 'package:escola_verde_mobile/models/post_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
@@ -16,6 +17,9 @@ class EventButton extends StatelessWidget {
   final String imagePath;
   final void Function() onTap;
   final String date;
+
+  static EventButton parse(PostModel post) => EventButton(
+      titulo: post.title!, imagePath: "", onTap: () {}, date: post.date!);
 
   @override
   Widget build(BuildContext context) {

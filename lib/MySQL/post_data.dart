@@ -16,29 +16,34 @@ class PostData {
     );
   }
 */
-  static Future<List<PostModel>> getPosts() async {
-    await dotenv.load(fileName: ".env");
+  static Future<List<PostModel>> getPosts(
+      {required int howManyNews, required int currentPage}) async {
+    if (posts.length < (howManyNews + currentPage)) {
+      await dotenv.load(fileName: ".env");
 
-    final pool = MySQLConnectionPool(
-      host: dotenv.get('HOST_EV'),
-      port: int.parse(dotenv.get('PORT_EV')),
-      userName: dotenv.get('USER_EV'),
-      password: dotenv.get('PASS_EV'),
-      maxConnections: int.parse(dotenv.get('MAX_CONNEC_EV')),
-      databaseName: dotenv.get('DATABASE_WP_EV'),
-    );
+      final pool = MySQLConnectionPool(
+        host: dotenv.get('HOST_EV'),
+        port: int.parse(dotenv.get('PORT_EV')),
+        userName: dotenv.get('USER_EV'),
+        password: dotenv.get('PASS_EV'),
+        maxConnections: int.parse(dotenv.get('MAX_CONNEC_EV')),
+        databaseName: dotenv.get('DATABASE_WP_EV'),
+      );
 
-    await pool
-        .execute(
-            "SELECT * FROM `wp_posts` WHERE post_status = 'publish' and post_type = 'post' ORDER BY `wp_posts`.`post_date` DESC")
-        .then(
-      (value) {
-        for (final row in value.rows) {
-          posts.add(PostModel.parse(row));
-        }
-      },
-    );
-    return posts;
+      //int actualPage = currentPage;
+
+      await pool.execute(
+          "SELECT * FROM `wp_posts` WHERE post_status = 'publish' and post_type = 'post' ORDER BY `wp_posts`.`post_date` DESC LIMIT :curpage , :howmany ",
+          {"howmany": howManyNews, "curpage": currentPage}).then(
+        (value) {
+          for (final row in value.rows) {
+            posts.add(PostModel.parse(row));
+          }
+        },
+      );
+    }
+    //return posts;
+    return posts.sublist(currentPage, (currentPage + howManyNews));
   }
 
   static Future<List<String?>> getImages({required PostModel post}) async {
