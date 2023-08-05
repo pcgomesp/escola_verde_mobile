@@ -67,9 +67,7 @@ class EventButton extends StatelessWidget {
                           textColor: Colors.black, fontSize: 12),
                     ),
                     Text(
-                      date,
-                      /*DateFormat("dd 'de' MMMM 'de' yyyy", "pt_BR")
-                          .format(date),*/
+                      formatString(date),
                       style: MyThemes.kreonRegular(
                           textColor: const Color(0xFF636363), fontSize: 12),
                     ),
@@ -89,4 +87,20 @@ class EventButton extends StatelessWidget {
       ),
     );
   }
+}
+
+String formatString(String string) {
+  List<String> aux = [];
+  List<String> aux2 = [];
+  String formated = string.replaceAll('-', '/');
+  aux = formated.split(' ');
+
+  //Inventendo ano/mes/dia para dia/mes/ano
+  aux2 = aux[0].split('/');
+  aux[0] = '${aux2[2]}/${aux2[1]}/${aux2[0]}';
+
+  formated = aux[0];
+  print(formated);
+
+  return formated;
 }
