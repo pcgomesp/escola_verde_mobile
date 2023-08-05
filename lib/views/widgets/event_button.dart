@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:escola_verde_mobile/models/post_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
@@ -14,15 +15,14 @@ class EventButton extends StatelessWidget {
       required this.date});
 
   final String titulo;
-  final Image imagePath;
+  //final Image imagePath;
+  final String imagePath;
   final void Function() onTap;
   final String date;
 
   static EventButton parse(PostModel post) => EventButton(
       titulo: post.title!,
-      imagePath: post.images.isNotEmpty
-          ? post.images[0]
-          : Image.asset('assets/undraw_server_down_s4lk.png'),
+      imagePath: post.images.isNotEmpty ? post.images[0] : "assets/erro.png",
       onTap: () {},
       date: post.date!);
 
@@ -79,7 +79,13 @@ class EventButton extends StatelessWidget {
                 child: Container(
                     height: MediaQuery.of(context).size.height * 0.14,
                     width: MediaQuery.of(context).size.width * 0.14,
-                    child: imagePath),
+                    child: imagePath == "assets/erro.png"
+                        ? Image.asset('assets/erro.png')
+                        : CachedNetworkImage(
+                            imageUrl: imagePath,
+                            placeholder: (context, url) =>
+                                const CircularProgressIndicator(),
+                          )),
               ),
             ],
           ),

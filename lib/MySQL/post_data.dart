@@ -40,17 +40,17 @@ class PostData {
   }
 
   //static Future<List<String?>> getImages(
-  static Future<List<Image>> getImages(
+  static Future<List<String>> getImages(
       {required PostModel post, required MySQLConnectionPool pool}) async {
     //List<String?> ImgUrls = [];
-    List<Image> allImages = [];
+    List<String> allImages = [];
 
     var resultimages = await pool.execute(
         "SELECT * FROM wp_posts WHERE post_status = 'inherit' and post_type = 'attachment' and post_parent = :pp and (post_mime_type='image/png' or post_mime_type='image/jpeg') ORDER BY `wp_posts`.`post_date` DESC",
         {"pp": post.id});
     for (final row in resultimages.rows) {
       //ImgUrls.add(row.colByName('guid'));
-      allImages.add(Image.network(row.colByName('guid')!));
+      allImages.add(row.colByName('guid')!);
     }
     //print(ImgUrls);
     return allImages;

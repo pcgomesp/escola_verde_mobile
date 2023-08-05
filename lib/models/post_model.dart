@@ -7,7 +7,8 @@ class PostModel {
   final String? date;
   final String? content;
   final String? title;
-  final List<Image> images = [];
+  //final List<Image> images = [];
+  final List<String> images = [];
 
   PostModel({
     required this.author,
