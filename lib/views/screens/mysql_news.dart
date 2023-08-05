@@ -6,6 +6,7 @@ import '../widgets/custom_appbar.dart';
 import '../widgets/drawer_appbar.dart';
 
 import 'package:escola_verde_mobile/MySQL/post_data.dart';
+import 'package:escola_verde_mobile/views/widgets/Error_message.dart';
 import 'package:escola_verde_mobile/data/cache_post_list.dart';
 
 class MySQLNews extends StatefulWidget {

@@ -5,18 +5,6 @@ import 'package:mysql_client/mysql_client.dart';
 import 'package:escola_verde_mobile/data/cache_post_list.dart';
 
 class PostData {
-  /* 
-  MySQLConnectionPool connectionMySql() {
-    return MySQLConnectionPool(
-      host: dotenv.get('HOST_EV'),
-      port: int.parse(dotenv.get('PORT_EV')),
-      userName: dotenv.get('USER_EV'),
-      password: dotenv.get('PASS_EV'),
-      maxConnections: int.parse(dotenv.get('MAX_CONNEC_EV')),
-      databaseName: dotenv.get('DATABASE_WP_EV'),
-    );
-  }
-*/
   static Future<List<PostModel>> getPosts(
       {required int howManyNews, required int currentPage}) async {
     if (posts.length < (howManyNews + currentPage)) {
