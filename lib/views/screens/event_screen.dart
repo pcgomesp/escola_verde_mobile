@@ -26,7 +26,7 @@ class _EventScreenState extends State<EventScreen> {
           children: event_list
               .map((evento) => EventButton(
                   titulo: evento.title,
-                  imagePath: Image.asset(evento.imagePath),
+                  imagePath: evento.imagePath,
                   onTap: () {},
                   date: 'testes' /*evento.date*/))
               .toList(),
