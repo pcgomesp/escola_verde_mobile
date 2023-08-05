@@ -31,6 +31,8 @@ class _MySQLNewsState extends State<MySQLNews> {
   }
 
   Future<void> _fetchPage(int pageKey) async {
+    print("oi estou aqui, pagekey é:");
+    print(pageKey);
     try {
       final newItems =
           await PostData.getPosts(howManyNews: _pageSize, currentPage: pageKey);
