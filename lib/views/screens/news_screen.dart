@@ -25,7 +25,7 @@ class _News_screenState extends State<News_screen> {
           children: news_list
               .map((evento) => EventButton(
                   titulo: evento.title,
-                  imagePath: evento.imagePath,
+                  imagePath: Image.asset(evento.imagePath),
                   onTap: () {},
                   date: 'Teste'))
               .toList(),

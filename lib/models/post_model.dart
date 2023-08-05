@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:mysql_client/mysql_client.dart';
 
 class PostModel {
@@ -6,13 +7,15 @@ class PostModel {
   final String? date;
   final String? content;
   final String? title;
+  final List<Image> images = [];
 
-  PostModel(
-      {required this.author,
-      required this.content,
-      required this.title,
-      required this.id,
-      required this.date});
+  PostModel({
+    required this.author,
+    required this.content,
+    required this.title,
+    required this.id,
+    required this.date,
+  });
 
   static PostModel parse(ResultSetRow post) => PostModel(
       id: post.colByName('ID'),

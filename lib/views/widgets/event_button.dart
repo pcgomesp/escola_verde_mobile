@@ -14,12 +14,17 @@ class EventButton extends StatelessWidget {
       required this.date});
 
   final String titulo;
-  final String imagePath;
+  final Image imagePath;
   final void Function() onTap;
   final String date;
 
   static EventButton parse(PostModel post) => EventButton(
-      titulo: post.title!, imagePath: "", onTap: () {}, date: post.date!);
+      titulo: post.title!,
+      imagePath: post.images.isNotEmpty
+          ? post.images[0]
+          : Image.asset('assets/undraw_server_down_s4lk.png'),
+      onTap: () {},
+      date: post.date!);
 
   @override
   Widget build(BuildContext context) {
@@ -74,12 +79,9 @@ class EventButton extends StatelessWidget {
               Expanded(
                 flex: 1,
                 child: Container(
-                  height: MediaQuery.of(context).size.height * 0.14,
-                  width: MediaQuery.of(context).size.width * 0.14,
-                  child: Image.asset(
-                    imagePath,
-                  ),
-                ),
+                    height: MediaQuery.of(context).size.height * 0.14,
+                    width: MediaQuery.of(context).size.width * 0.14,
+                    child: imagePath),
               ),
             ],
           ),
