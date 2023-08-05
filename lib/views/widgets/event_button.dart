@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:escola_verde_mobile/models/post_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
@@ -14,12 +15,16 @@ class EventButton extends StatelessWidget {
       required this.date});
 
   final String titulo;
+  //final Image imagePath;
   final String imagePath;
   final void Function() onTap;
   final String date;
 
   static EventButton parse(PostModel post) => EventButton(
-      titulo: post.title!, imagePath: "", onTap: () {}, date: post.date!);
+      titulo: post.title!,
+      imagePath: post.images.isNotEmpty ? post.images[0] : "assets/erro.png",
+      onTap: () {},
+      date: post.date!);
 
   @override
   Widget build(BuildContext context) {
@@ -62,9 +67,7 @@ class EventButton extends StatelessWidget {
                           textColor: Colors.black, fontSize: 12),
                     ),
                     Text(
-                      date,
-                      /*DateFormat("dd 'de' MMMM 'de' yyyy", "pt_BR")
-                          .format(date),*/
+                      formatString(date),
                       style: MyThemes.kreonRegular(
                           textColor: const Color(0xFF636363), fontSize: 12),
                     ),
@@ -74,12 +77,15 @@ class EventButton extends StatelessWidget {
               Expanded(
                 flex: 1,
                 child: Container(
-                  height: MediaQuery.of(context).size.height * 0.14,
-                  width: MediaQuery.of(context).size.width * 0.14,
-                  child: Image.asset(
-                    imagePath,
-                  ),
-                ),
+                    height: MediaQuery.of(context).size.height * 0.14,
+                    width: MediaQuery.of(context).size.width * 0.14,
+                    child: imagePath == "assets/erro.png"
+                        ? Image.asset('assets/erro.png')
+                        : CachedNetworkImage(
+                            imageUrl: imagePath,
+                            placeholder: (context, url) =>
+                                const CircularProgressIndicator(),
+                          )),
               ),
             ],
           ),
@@ -87,4 +93,20 @@ class EventButton extends StatelessWidget {
       ),
     );
   }
+}
+
+String formatString(String string) {
+  List<String> aux = [];
+  List<String> aux2 = [];
+  String formated = string.replaceAll('-', '/');
+  aux = formated.split(' ');
+
+  //Inventendo ano/mes/dia para dia/mes/ano
+  aux2 = aux[0].split('/');
+  aux[0] = '${aux2[2]}/${aux2[1]}/${aux2[0]}';
+
+  formated = aux[0];
+  print(formated);
+
+  return formated;
 }
