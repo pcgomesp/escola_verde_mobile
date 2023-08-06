@@ -202,7 +202,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                 imagePath: 'assets/ensino_verde.png',
                                 imageHeigth:
                                     MediaQuery.of(context).size.height * 0.11,
-                                onTap: () {}),
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) =>
+                                          const EnsinoVerdeScreen()));
+                                }),
                           ],
                         ),
                         SizedBox(
