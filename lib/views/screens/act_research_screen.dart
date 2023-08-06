@@ -3,6 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../../themes/my_themes.dart';
 import '../widgets/custom_appbar.dart';
+import '../widgets/snackbar_error.dart';
 import '../widgets/standard_text_and_link.dart';
 
 class ActResearchScreen extends StatefulWidget {
@@ -68,7 +69,8 @@ class _ActResearchScreenState extends State<ActResearchScreen> {
                   TextButton(
                       onPressed: () => setState(() {
                             launchExternalWebsite(
-                                "https://escolaverde.org/site/wp-content/uploads/2015/06/Pesquisa-documental-1.pdf");
+                                "https://escolaverde.org/site/wp-content/uploads/2015/06/Pesquisa-documental-1.pdf",
+                                context);
                           }),
                       child: Text(
                         "Documento 1",
@@ -79,7 +81,8 @@ class _ActResearchScreenState extends State<ActResearchScreen> {
                   TextButton(
                       onPressed: () => setState(() {
                             launchExternalWebsite(
-                                "https://escolaverde.org/site/wp-content/uploads/2015/06/Pesquisa-documental.pdf");
+                                "https://escolaverde.org/site/wp-content/uploads/2015/06/Pesquisa-documental.pdf",
+                                context);
                           }),
                       child: Text(
                         "Documento 2",
@@ -125,7 +128,8 @@ class _ActResearchScreenState extends State<ActResearchScreen> {
                   TextButton(
                       onPressed: () => setState(() {
                             launchExternalWebsite(
-                                "https://escolaverde.org/site/wp-content/uploads/2015/06/Pesquisa-Survey-com-os-Professores.pdf");
+                                "https://escolaverde.org/site/wp-content/uploads/2015/06/Pesquisa-Survey-com-os-Professores.pdf",
+                                context);
                           }),
                       child: Text(
                         "Documento 1",
@@ -150,10 +154,12 @@ class _ActResearchScreenState extends State<ActResearchScreen> {
     );
   }
 
-  void launchExternalWebsite(String url) async {
+  void launchExternalWebsite(String url, context) async {
     Uri trueUrl = Uri.parse(url);
-    if (!await launchUrl(trueUrl, mode: LaunchMode.externalApplication)) {
-      throw Exception('Could not launch $url');
+    try {
+      await launchUrl(trueUrl, mode: LaunchMode.externalApplication);
+    } catch (_) {
+      SnackErrorMessage.showSnack(context);
     }
   }
 }

@@ -1,3 +1,4 @@
+import 'package:escola_verde_mobile/views/widgets/snackbar_error.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -19,7 +20,7 @@ class Link_button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => _launchUrl(url),
+      onTap: () => _launchUrl(url, context),
       child: Container(
         margin: EdgeInsets.all(20),
         width: MediaQuery.of(context).size.width * 0.95,
@@ -77,9 +78,13 @@ class Link_button extends StatelessWidget {
   }
 }
 
-Future<void> _launchUrl(url) async {
-  Uri trueUrl = Uri.parse(url);
-  if (!await launchUrl(trueUrl, mode: LaunchMode.externalApplication)) {
-    throw Exception('Could not launch $url');
+Future<void> _launchUrl(url, context) async {
+  {
+    Uri trueUrl = Uri.parse(url);
+    try {
+      await launchUrl(trueUrl, mode: LaunchMode.externalApplication);
+    } catch (_) {
+      SnackErrorMessage.showSnack(context);
+    }
   }
 }
