@@ -2,6 +2,7 @@ import 'dart:ffi' as size;
 
 import 'package:escola_verde_mobile/views/screens/activity_screen.dart';
 import 'package:escola_verde_mobile/views/screens/contact_screen.dart';
+import 'package:escola_verde_mobile/views/screens/ensino_verde_screen.dart';
 import 'package:escola_verde_mobile/views/screens/explaining_form_screen.dart';
 import 'package:escola_verde_mobile/views/screens/form_screen.dart';
 import 'package:escola_verde_mobile/views/screens/news_screen.dart';
@@ -104,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         SizedBox(
                           height: MediaQuery.of(context).size.height * 0.02,
                         ),
-                        HomeWhoButton(),
+                        const HomeWhoButton(),
                         SizedBox(
                           height: MediaQuery.of(context).size.width * 0.08,
                         ),
@@ -120,13 +121,21 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Navigator.of(context).push(MaterialPageRoute(
                                       builder: (context) => activity_screen()));
                                 }),
-                            HomeButton(
+                            /* HomeButton(
                                 titulo: 'Eventos',
                                 imagePath: 'assets/eventos.png',
                                 imageHeigth:
                                     MediaQuery.of(context).size.height * 0.09,
                                 onTap: () {
                                   Navigator.pushNamed(context, '/event-screen');
+                                }), */
+                            HomeButton(
+                                titulo: 'Notícias',
+                                imagePath: 'assets/noticias.png',
+                                imageHeigth:
+                                    MediaQuery.of(context).size.height * 0.11,
+                                onTap: () {
+                                  Navigator.pushNamed(context, '/new-screen');
                                 }),
                           ],
                         ),
@@ -136,14 +145,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            HomeButton(
+                            /* HomeButton(
                                 titulo: 'Notícias',
                                 imagePath: 'assets/noticias.png',
                                 imageHeigth:
                                     MediaQuery.of(context).size.height * 0.11,
                                 onTap: () {
                                   Navigator.pushNamed(context, '/new-screen');
-                                }),
+                                }), */
                             HomeButton(
                                 titulo: 'Contatos',
                                 imagePath: 'assets/contatos.png',
@@ -153,6 +162,17 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Navigator.of(context).push(MaterialPageRoute(
                                       builder: (context) => Contact_screen()));
                                 }),
+                            HomeButton(
+                                titulo: 'Formulario',
+                                imagePath: 'assets/foms2.png',
+                                imageHeigth:
+                                    MediaQuery.of(context).size.height * 0.11,
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) =>
+                                          const ExpFormScreen()));
+                                  //builder: (context) => Form_screen()));
+                                }),
                           ],
                         ),
                         SizedBox(
@@ -161,12 +181,22 @@ class _HomeScreenState extends State<HomeScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            HomeButton(
+                            /* HomeButton(
                                 titulo: 'Locais Visitados',
                                 imagePath: 'assets/visitados.png',
                                 imageHeigth:
                                     MediaQuery.of(context).size.height * 0.11,
-                                onTap: () {}),
+                                onTap: () {}), */
+                            HomeButton(
+                                titulo: 'Links Uteis',
+                                imagePath: 'assets/links_uteis.png',
+                                imageHeigth:
+                                    MediaQuery.of(context).size.height * 0.11,
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) =>
+                                          const Links_screen()));
+                                }),
                             HomeButton(
                                 titulo: 'Ensino Verde',
                                 imagePath: 'assets/ensino_verde.png',
@@ -178,7 +208,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         SizedBox(
                           height: MediaQuery.of(context).size.width * 0.08,
                         ),
-                        Row(
+                        /* Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             HomeButton(
@@ -202,7 +232,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   //builder: (context) => Form_screen()));
                                 }),
                           ],
-                        ),
+                        ), */
                         SizedBox(
                           height: MediaQuery.of(context).size.width * 0.08,
                         )
