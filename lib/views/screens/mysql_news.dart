@@ -58,7 +58,7 @@ class _MySQLNewsState extends State<MySQLNews> {
         pagingController: _pagingController,
         builderDelegate: PagedChildBuilderDelegate<PostModel>(
             itemBuilder: (context, item, index) =>
-                EventButton.parse(posts[index])),
+                EventButton.parse(posts[index], context)),
       ),
     );
   }

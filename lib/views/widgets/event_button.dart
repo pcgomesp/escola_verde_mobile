@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:escola_verde_mobile/models/post_model.dart';
+import 'package:escola_verde_mobile/views/screens/news_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
@@ -20,10 +21,13 @@ class EventButton extends StatelessWidget {
   final void Function() onTap;
   final String date;
 
-  static EventButton parse(PostModel post) => EventButton(
+  static EventButton parse(PostModel post, context) => EventButton(
       titulo: post.title!,
       imagePath: post.images.isNotEmpty ? post.images[0] : "assets/erro.png",
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => News_screen(informationsFromPost: post)));
+      },
       date: post.date!);
 
   @override
