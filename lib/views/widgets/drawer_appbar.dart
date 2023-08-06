@@ -16,6 +16,11 @@ import '../screens/mysql_news.dart';
 class DrawerAppbar extends StatelessWidget {
   const DrawerAppbar({super.key});
 
+  // Olá Futuro colaborador, tudo bem?
+  // Neste drawer, os comentários são referentes a páginas do site escolaverde.org que inicialmente foi pensado em
+  // ser incluído no escopo do aplicativo, mas, que por motivos de tempo e afins, acabaram não sendo.
+  // Sinta-se à vontade de incluílas e, posteriormente, colocar a referência neste widget.
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -42,9 +47,9 @@ class DrawerAppbar extends StatelessWidget {
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => const ActResearchScreen()));
             }),
-            subMenuOption('Ensino'),
+            /* subMenuOption('Ensino'),
             subMenuOption('Produtos'),
-            subMenuOption('Galeria de Fotos')
+            subMenuOption('Galeria de Fotos'), */
           ]),
           const Padding(padding: EdgeInsets.only(top: 7.0)),
           menuOption('Eventos', allChildren: [
@@ -53,7 +58,7 @@ class DrawerAppbar extends StatelessWidget {
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => const Event_certificate_screen()));
             }),
-            subMenuOption('Promovidos pelo PEV')
+            /* subMenuOption('Promovidos pelo PEV'), */
           ]),
           const Padding(padding: EdgeInsets.only(top: 7.0)),
           menuOption('Institucional', allChildren: [
@@ -88,7 +93,7 @@ class DrawerAppbar extends StatelessWidget {
                   builder: (context) => const Inst_greenroom_screen()));
             }),
           ]),
-          const Padding(padding: EdgeInsets.only(top: 7.0)),
+          /* const Padding(padding: EdgeInsets.only(top: 7.0)),
           menuOption('Locais Visitados', allChildren: [
             subMenuOption('Juazeiro'),
             subMenuOption('Petrolina'),
@@ -96,7 +101,7 @@ class DrawerAppbar extends StatelessWidget {
             subMenuOption('São Raimundo Nonato'),
             subMenuOption('Sobradinho'),
             subMenuOption('Senhor do Bonfim'),
-          ]),
+          ]), */
           const Padding(padding: EdgeInsets.only(top: 7.0)),
           menuOption('Notícias', allChildren: [
             subMenuOption('Notícias Atuais', tap: () {
