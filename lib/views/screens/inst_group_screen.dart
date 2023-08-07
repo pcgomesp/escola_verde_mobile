@@ -1,7 +1,6 @@
 import 'package:escola_verde_mobile/views/widgets/custom_appbar.dart';
 import 'package:escola_verde_mobile/views/widgets/drawer_appbar.dart';
 import 'package:flutter/material.dart';
-import 'package:escola_verde_mobile/themes/my_themes.dart';
 import '../widgets/snackbar_error.dart';
 import '../widgets/standard_text_and_link.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -12,22 +11,22 @@ class Inst_group_screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xFFECEBE1),
+        backgroundColor: const Color(0xFFECEBE1),
         appBar: const CustomAppBar('Grupos de Pesquisa'),
         drawer: const DrawerAppbar(),
         body: SingleChildScrollView(
             child: Center(
                 child: Column(children: [
           Padding(
-            padding: EdgeInsets.only(top: 20),
+            padding: const EdgeInsets.only(top: 20),
             child: Image.asset(
               'assets/grupos.png',
               width: 230,
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(top: 20, left: 15, right: 15, bottom: 10),
-            child: const DescriptiveText(
+            child: DescriptiveText(
                 'Grupo de Pesquisa em Educação Ambiental Interdisciplinar – GPEAI',
                 'O GPEAI é um Grupo de Pesquisa cadastrado no CNPq e certificado pela UNIVASF. O grupo é formado por'
                     'professores/pesquisadores e alunos/pesquisadores de diferentes instituições acadêmicas da Meso Região do Vale'
@@ -42,7 +41,7 @@ class Inst_group_screen extends StatelessWidget {
                 "http://www.escolaverde.univasf.edu.br/wp-content/uploads/2012/06/GRUPODEPESQUISA.pdf"),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 20),
+            padding: const EdgeInsets.only(top: 20),
             child: GestureDetector(
               onTap: () => _launchUrl(
                   "http://dgp.cnpq.br/dgp/espelhogrupo/8060949249279649",

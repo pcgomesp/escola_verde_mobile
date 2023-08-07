@@ -1,6 +1,5 @@
 import 'package:escola_verde_mobile/views/widgets/custom_appbar.dart';
 import 'package:escola_verde_mobile/views/widgets/drawer_appbar.dart';
-import 'package:escola_verde_mobile/views/widgets/form_button.dart';
 import 'package:escola_verde_mobile/views/widgets/link_button.dart';
 import 'package:flutter/material.dart';
 
@@ -13,8 +12,8 @@ class EnsinoVerdeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar('Ensino verde'),
-      drawer: DrawerAppbar(),
+      appBar: const CustomAppBar('Ensino verde'),
+      drawer: const DrawerAppbar(),
       body: SingleChildScrollView(
         child: Column(
           children: [

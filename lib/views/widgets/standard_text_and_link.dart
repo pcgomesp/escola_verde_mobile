@@ -1,9 +1,6 @@
-import 'package:escola_verde_mobile/views/widgets/Error_message.dart';
 import 'package:escola_verde_mobile/views/widgets/snackbar_error.dart';
 import 'package:escola_verde_mobile/views/widgets/view_more_button.dart';
 import 'package:flutter/material.dart';
-import 'package:top_snackbar_flutter/custom_snack_bar.dart';
-import 'package:top_snackbar_flutter/top_snack_bar.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../themes/my_themes.dart';
 

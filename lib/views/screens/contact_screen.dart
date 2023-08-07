@@ -5,7 +5,6 @@ import '../widgets/custom_appbar.dart';
 import '../widgets/drawer_appbar.dart';
 
 import 'package:url_launcher/url_launcher.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 
 class Contact_screen extends StatefulWidget {
   const Contact_screen({Key? key}) : super(key: key);
@@ -25,9 +24,10 @@ class _Contact_screenState extends State<Contact_screen> {
 
     }
   }
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFECEBE1),
+      backgroundColor: const Color(0xFFECEBE1),
       appBar: const CustomAppBar('Contatos'),
       drawer: const DrawerAppbar(),
       body: SingleChildScrollView(
@@ -36,7 +36,7 @@ class _Contact_screenState extends State<Contact_screen> {
             children: [
 
               Padding(
-                padding: EdgeInsets.only(top: 5),
+                padding: const EdgeInsets.only(top: 5),
                 child: Image.asset(
                   'assets/contact_.png',
                   width: 250,
@@ -44,7 +44,7 @@ class _Contact_screenState extends State<Contact_screen> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(left: 15, right: 15, ),
+                padding: const EdgeInsets.only(left: 15, right: 15, ),
                 child:  Column(
                   children: [
                     Text(
@@ -64,7 +64,7 @@ class _Contact_screenState extends State<Contact_screen> {
                             width: 20,
                           ),
                         ),
-                        label: Text(
+                        label: const Text(
                           "Programaescolaverde",
                           style: TextStyle(
                             color: Colors.blueAccent,
@@ -81,7 +81,7 @@ class _Contact_screenState extends State<Contact_screen> {
                             width: 20,
                           ),
                         ),
-                        label: Text(
+                        label: const Text(
                           "Programaescolaverde",
                           style: TextStyle(
                             color: Colors.blueAccent,
@@ -98,7 +98,7 @@ class _Contact_screenState extends State<Contact_screen> {
                             width: 20,
                           ),
                         ),
-                        label: Text(
+                        label: const Text(
                           "Programaescolaverde",
                           style: TextStyle(
                             color: Colors.blueAccent,
@@ -107,7 +107,7 @@ class _Contact_screenState extends State<Contact_screen> {
                   ],
                 ),),
               Padding(
-                padding: EdgeInsets.only(top: 5),
+                padding: const EdgeInsets.only(top: 5),
                 child: Column(
                   children: [
                     Text(
@@ -126,7 +126,7 @@ class _Contact_screenState extends State<Contact_screen> {
                             width: 20,
                           ),
                         ),
-                        label: Text(
+                        label: const Text(
                           "escolaverde@univasf.edu.br",
                           style: TextStyle(
                             color: Colors.blueAccent,
@@ -143,7 +143,7 @@ class _Contact_screenState extends State<Contact_screen> {
                             width: 20,
                           ),
                         ),
-                        label: Text(
+                        label: const Text(
                             "eainterdisciplinar@gmail.com",
                             style: TextStyle(
                               color: Colors.blueAccent,
@@ -154,7 +154,7 @@ class _Contact_screenState extends State<Contact_screen> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 10),
+                padding: const EdgeInsets.only(top: 10),
                 child: Column(
                   children: [
                     Text(
@@ -167,9 +167,9 @@ class _Contact_screenState extends State<Contact_screen> {
                           launchExternalWebsite("tel:08781052994");
                         }),
                         icon: Container(
-                          child: Icon(Icons.call_outlined, size: 25.0),
+                          child: const Icon(Icons.call_outlined, size: 25.0),
                         ),
-                        label: Text(
+                        label: const Text(
                           "+55 87 8105 2994",
                           textScaleFactor: 1.2,
                           style: TextStyle(
@@ -183,7 +183,7 @@ class _Contact_screenState extends State<Contact_screen> {
                 ),
               ),
               Padding(
-                  padding: EdgeInsets.only(left: 15, right: 15, top: 10,bottom: 15),
+                  padding: const EdgeInsets.only(left: 15, right: 15, top: 10,bottom: 15),
                   child: Column(
                     children: [
                       Text(
@@ -191,7 +191,7 @@ class _Contact_screenState extends State<Contact_screen> {
                         style: MyThemes.kreonRegular(textColor: MyThemes.colorTextTitle),
                         textScaleFactor: 1.5,
                       ),
-                      Text('\n'
+                      const Text('\n'
                           'UNIVASF- Av. Antonio Carlos Magalhães,\n'
                           '510, Maringá, Juazeiro, Bahia.',
                         textScaleFactor: 1.2,

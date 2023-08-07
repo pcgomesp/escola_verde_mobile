@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:mysql_client/mysql_client.dart';
 
 class PostModel {
@@ -7,7 +6,6 @@ class PostModel {
   final String? date;
   final String? content;
   final String? title;
-  //final List<Image> images = [];
   final List<String> images = [];
 
   PostModel({

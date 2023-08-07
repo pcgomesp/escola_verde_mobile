@@ -1,7 +1,6 @@
 import 'package:escola_verde_mobile/views/widgets/custom_appbar.dart';
 import 'package:escola_verde_mobile/views/widgets/drawer_appbar.dart';
 import 'package:escola_verde_mobile/views/widgets/form_button.dart';
-import 'package:escola_verde_mobile/views/widgets/link_button.dart';
 import 'package:flutter/material.dart';
 
 import '../../themes/my_themes.dart';
@@ -12,8 +11,8 @@ class ExpFormScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar('Envie Sua Notícia!'),
-      drawer: DrawerAppbar(),
+      appBar: const CustomAppBar('Envie Sua Notícia!'),
+      drawer: const DrawerAppbar(),
       body: SingleChildScrollView(
         child: Column(
           children: [

@@ -3,7 +3,6 @@ import 'package:escola_verde_mobile/models/post_model.dart';
 import 'package:escola_verde_mobile/views/screens/news_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:intl/intl.dart';
 
 import '../../themes/my_themes.dart';
 
@@ -80,7 +79,7 @@ class EventButton extends StatelessWidget {
               ),
               Expanded(
                 flex: 1,
-                child: Container(
+                child: SizedBox(
                     height: MediaQuery.of(context).size.height * 0.14,
                     width: MediaQuery.of(context).size.width * 0.14,
                     child: imagePath == "assets/erro.png"

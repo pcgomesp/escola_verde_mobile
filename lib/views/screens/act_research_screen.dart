@@ -75,7 +75,7 @@ class _ActResearchScreenState extends State<ActResearchScreen> {
                       child: Text(
                         "Documento 1",
                         style: MyThemes.fontSideMenu(
-                            textColor: Color.fromRGBO(56, 106, 0, 1),
+                            textColor: const Color.fromRGBO(56, 106, 0, 1),
                             fontSize: 15),
                       )),
                   TextButton(
@@ -87,7 +87,7 @@ class _ActResearchScreenState extends State<ActResearchScreen> {
                       child: Text(
                         "Documento 2",
                         style: MyThemes.fontSideMenu(
-                            textColor: Color.fromRGBO(56, 106, 0, 1),
+                            textColor: const Color.fromRGBO(56, 106, 0, 1),
                             fontSize: 15),
                       )),
                 ],

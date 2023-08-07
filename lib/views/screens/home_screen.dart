@@ -1,11 +1,8 @@
-import 'dart:ffi' as size;
 
 import 'package:escola_verde_mobile/views/screens/activity_screen.dart';
 import 'package:escola_verde_mobile/views/screens/contact_screen.dart';
 import 'package:escola_verde_mobile/views/screens/ensino_verde_screen.dart';
 import 'package:escola_verde_mobile/views/screens/explaining_form_screen.dart';
-import 'package:escola_verde_mobile/views/screens/form_screen.dart';
-import 'package:escola_verde_mobile/views/screens/news_screen.dart';
 import 'package:escola_verde_mobile/views/widgets/home_button.dart';
 import 'package:escola_verde_mobile/views/widgets/home_who_button.dart';
 import 'package:flutter/material.dart';
@@ -119,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     MediaQuery.of(context).size.height * 0.105,
                                 onTap: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => activity_screen()));
+                                      builder: (context) => const activity_screen()));
                                 }),
                             /* HomeButton(
                                 titulo: 'Eventos',
@@ -160,7 +157,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     MediaQuery.of(context).size.height * 0.09,
                                 onTap: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => Contact_screen()));
+                                      builder: (context) => const Contact_screen()));
                                 }),
                             HomeButton(
                                 titulo: 'Formulario',

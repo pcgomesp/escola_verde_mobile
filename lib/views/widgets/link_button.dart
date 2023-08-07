@@ -22,7 +22,7 @@ class Link_button extends StatelessWidget {
     return GestureDetector(
       onTap: () => _launchUrl(url, context),
       child: Container(
-        margin: EdgeInsets.all(20),
+        margin: const EdgeInsets.all(20),
         width: MediaQuery.of(context).size.width * 0.95,
         height: MediaQuery.of(context).size.height * 0.20,
         decoration: BoxDecoration(
@@ -34,7 +34,7 @@ class Link_button extends StatelessWidget {
               offset: const Offset(0, 4), // changes position of shadow
             ),
           ],
-          gradient: LinearGradient(
+          gradient: const LinearGradient(
             colors: [
               Color.fromRGBO(64, 94, 38, 0.7),
               Color.fromRGBO(168, 246, 98, 0.4),
@@ -43,7 +43,7 @@ class Link_button extends StatelessWidget {
           ),
           color: MyThemes.colorScreen,
           borderRadius: const BorderRadius.all(Radius.circular(20)),
-          image: DecorationImage(
+          image: const DecorationImage(
               image: AssetImage("assets/capin.PNG"), opacity: 0.1),
         ),
         child: Column(
@@ -59,11 +59,6 @@ class Link_button extends StatelessWidget {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.005,
             ),
-            /*Image.asset(
-              imagePath,
-              height: imageHeigth,
-            ),*/
-
             Image.network(
               imagePath,
               height: imageHeigth,

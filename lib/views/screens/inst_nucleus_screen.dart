@@ -1,7 +1,6 @@
 import 'package:escola_verde_mobile/views/widgets/custom_appbar.dart';
 import 'package:escola_verde_mobile/views/widgets/drawer_appbar.dart';
 import 'package:flutter/material.dart';
-import 'package:escola_verde_mobile/themes/my_themes.dart';
 import '../widgets/standard_text_and_link.dart';
 
 class Inst_nucleus_screen extends StatelessWidget {
@@ -10,7 +9,7 @@ class Inst_nucleus_screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFECEBE1),
+      backgroundColor: const Color(0xFFECEBE1),
       appBar: const CustomAppBar('Núcleo Temático'),
       drawer: const DrawerAppbar(),
       body: SingleChildScrollView(
@@ -18,15 +17,15 @@ class Inst_nucleus_screen extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.only(top: 20),
+                padding: const EdgeInsets.only(top: 20),
                 child: Image.asset(
                   'assets/nuteai.png',
                   width: 200,
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 20, left: 15, right: 15, bottom: 10),
-                child: const DescriptiveText(
+                child: DescriptiveText(
                 'Núcleo Temático de Educação Ambiental Interdisciplinar (NUTEAI)', //title
                 'O NUTEAI é um componente curricular da UNIVASF formado por professores e alunos de vários cursos e áreas do conhecimento, '
                 'empenhados em promover a Educação Ambiental de forma integrada e continua nas escolas da região. O grupo representa mais uma '

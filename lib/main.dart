@@ -1,4 +1,3 @@
-import 'package:escola_verde_mobile/data/cache_post_list.dart';
 import 'package:escola_verde_mobile/views/screens/event_screen.dart';
 import 'package:escola_verde_mobile/views/screens/home_screen.dart';
 import 'package:escola_verde_mobile/views/screens/mysql_news.dart';
@@ -8,7 +7,6 @@ import 'package:escola_verde_mobile/views/screens/about_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:device_preview/device_preview.dart';
-import 'package:escola_verde_mobile/MySQL/post_data.dart';
 
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +14,7 @@ void main() {
 
   runApp(DevicePreview(
     enabled: false,
-    builder: (context) => MyApp(),
+    builder: (context) => const MyApp(),
   ));
   //runApp(const MyApp());
 }
@@ -40,7 +38,6 @@ class MyApp extends StatelessWidget {
         '/about-screen': (context) => const AboutScreen(),
         '/event-screen': (context) => const EventScreen(),
         '/new-screen': (context) => const MySQLNews()
-        //'/': (context) => const MainMenu(),
       },
     );
   }

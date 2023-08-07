@@ -27,8 +27,8 @@ class _Links_screenState extends State<Links_screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar('Links úteis'),
-      drawer: DrawerAppbar(),
+      appBar: const CustomAppBar('Links úteis'),
+      drawer: const DrawerAppbar(),
       body: SingleChildScrollView(
         child: Center(
           child: Column(

@@ -1,5 +1,4 @@
 import 'package:escola_verde_mobile/views/widgets/standard_text_and_link.dart';
-import 'package:escola_verde_mobile/views/widgets/view_more_button.dart';
 import 'package:flutter/material.dart';
 import 'package:escola_verde_mobile/themes/my_themes.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -30,19 +29,19 @@ class _activity_screenState extends State<activity_screen> {
       appBar: const CustomAppBar(
           'Atividades'), //isso aqui não sei se esta de fato no meio
       body: SingleChildScrollView(
-        padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+        padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
         child: Column(
           children: [
             Center(
               child: Container(
-                child: Image.asset(
-                  'assets/activity_screen.png',
-                ), //trocar imagem?
                 height: MediaQuery.of(context).size.height * 0.25,
                 width: MediaQuery.of(context).size.height * 0.25,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(
-                        Radius.circular(200))), //ERA PRA FICAR REDONDO
+                        Radius.circular(200))),
+                child: Image.asset(
+                  'assets/activity_screen.png',
+                ), //ERA PRA FICAR REDONDO
               ),
             ),
             SizedBox(
@@ -227,7 +226,7 @@ class _activity_screenState extends State<activity_screen> {
                       child: Text(
                         "Documento 1",
                         style: MyThemes.fontSideMenu(
-                            textColor: Color.fromRGBO(56, 106, 0, 1),
+                            textColor: const Color.fromRGBO(56, 106, 0, 1),
                             fontSize: 15),
                       )),
                   TextButton(
@@ -238,7 +237,7 @@ class _activity_screenState extends State<activity_screen> {
                       child: Text(
                         "Documento 2",
                         style: MyThemes.fontSideMenu(
-                            textColor: Color.fromRGBO(56, 106, 0, 1),
+                            textColor: const Color.fromRGBO(56, 106, 0, 1),
                             fontSize: 15),
                       )),
                 ],

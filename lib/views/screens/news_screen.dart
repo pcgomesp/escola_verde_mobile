@@ -4,12 +4,10 @@ import 'package:escola_verde_mobile/models/post_model.dart';
 import 'package:escola_verde_mobile/themes/my_themes.dart';
 import 'package:escola_verde_mobile/views/widgets/custom_text_html.dart';
 import 'package:flutter/material.dart';
-import 'package:escola_verde_mobile/views/widgets/event_button.dart';
 
 import '../widgets/custom_appbar.dart';
 import '../widgets/drawer_appbar.dart';
 
-import 'package:escola_verde_mobile/data/eventos_estaticos.dart';
 
 class News_screen extends StatefulWidget {
   const News_screen({Key? key, required this.informationsFromPost})
@@ -24,7 +22,7 @@ class News_screen extends StatefulWidget {
 class _News_screenState extends State<News_screen> {
   @override
   Widget build(BuildContext context) {
-    final bool _haveImage = widget.informationsFromPost.images.isNotEmpty;
+    final bool haveImage = widget.informationsFromPost.images.isNotEmpty;
 
     final List<Widget> imageSliders = widget.informationsFromPost.images
         .map(
@@ -83,7 +81,7 @@ class _News_screenState extends State<News_screen> {
               const SizedBox(
                 height: 25,
               ),
-              if (_haveImage)
+              if (haveImage)
                 CachedNetworkImage(
                   imageUrl: widget.informationsFromPost.images[0],
                   placeholder: (context, url) =>
@@ -93,7 +91,7 @@ class _News_screenState extends State<News_screen> {
               const SizedBox(
                 height: 25,
               ),
-              if (_haveImage)
+              if (haveImage)
                 CarouselSlider(
                     options: CarouselOptions(
                       height: MediaQuery.of(context).size.height * 0.4,

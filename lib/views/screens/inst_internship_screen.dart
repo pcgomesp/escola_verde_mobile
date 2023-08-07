@@ -8,17 +8,17 @@ class Inst_internship_screen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Color(0xFFECEBE1),
-      appBar: const CustomAppBar('Estágio'),
-      drawer: const DrawerAppbar(),
+      appBar: CustomAppBar('Estágio'),
+      drawer: DrawerAppbar(),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             children: [
               Padding(
                 padding: EdgeInsets.only(top: 20, left: 15, right: 15, bottom: 10),
-                child: const DescriptiveText(
+                child: DescriptiveText(
                 'Estágio Curricular Obrigatório ou Complementar', //title
                 'Uma das possibilidades de atuação no PEV é através de estágio curricular obrigatório ou complementar. O estudante fará seu estágio curricular pela Secretaria de Educação das Prefeituras de qualquer dos municípios envolvidos no Projeto, com atuação profissional através do Projeto Escola Verde.\n'
                 'O estudante poderá cumprir integralmente, ou parcialmente, a carga horária do estágio, que varia de 180 a 360 hs, dependendo do curso e da instituição de ensino. O estágio deverá ser solicitado à Coordenação do PEV, mediante solicitação expressa através de carta e apresentação de Currículo, para avaliação.\n\n'

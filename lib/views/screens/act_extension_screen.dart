@@ -16,22 +16,20 @@ class _ActExtensionScreenState extends State<ActExtensionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyThemes.colorScreen,
-      appBar: const CustomAppBar(
-          'Atividades'), //isso aqui não sei se esta de fato no meio
+      appBar: const CustomAppBar('Atividades'),
       body: SingleChildScrollView(
-        padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+        padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
         child: Column(
           children: [
             Center(
               child: Container(
-                child: Image.asset(
-                  'assets/activity_screen.png',
-                ), //trocar imagem?
                 height: MediaQuery.of(context).size.height * 0.25,
                 width: MediaQuery.of(context).size.height * 0.25,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                        Radius.circular(200))), //ERA PRA FICAR REDONDO
+                decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(200))),
+                child: Image.asset(
+                  'assets/activity_screen.png',
+                ),
               ),
             ),
             SizedBox(

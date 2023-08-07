@@ -2,9 +2,7 @@
 import 'package:escola_verde_mobile/views/widgets/custom_appbar.dart';
 import 'package:escola_verde_mobile/views/widgets/drawer_appbar.dart';
 import 'package:flutter/material.dart';
-import 'package:escola_verde_mobile/themes/my_themes.dart';
 import '../widgets/standard_text_and_link.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 
 class Event_certificate_screen extends StatelessWidget {
@@ -12,17 +10,17 @@ class Event_certificate_screen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Color(0xFFECEBE1),
-      appBar: const CustomAppBar('Certificados'),
-      drawer: const DrawerAppbar(),
+      appBar: CustomAppBar('Certificados'),
+      drawer: DrawerAppbar(),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             children: [
               Padding(
                 padding: EdgeInsets.only(top: 20, left: 15, right: 15, bottom: 10),
-                child: const DescriptiveText(
+                child: DescriptiveText(
                 'Geração de Certificados',
                 'Os eventos promovidos pelo Escola Verde oferecem certificados para todos os participantes. Reconhecemos a importância de valorizar e celebrar seu envolvimento em nossas atividades voltadas para a sustentabilidade.'
                 '\nOs certificados do Escola Verde são uma forma tangível de comprovar sua participação e conhecimentos adquiridos em nossos eventos. Além de ser uma conquista pessoal, eles podem ser utilizados para enriquecer seu currículo, compartilhar nas redes sociais ou guardar como uma lembrança especial.'

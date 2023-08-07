@@ -1,5 +1,4 @@
 import 'package:escola_verde_mobile/models/post_model.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:mysql_client/mysql_client.dart';
 import 'package:escola_verde_mobile/data/cache_post_list.dart';
@@ -19,8 +18,6 @@ class PostData {
         databaseName: dotenv.get('DATABASE_WP_EV'),
       );
 
-      //int actualPage = currentPage;
-
       await pool.execute(
           "SELECT * FROM `wp_posts` WHERE post_status = 'publish' and post_type = 'post' ORDER BY `wp_posts`.`post_date` DESC LIMIT :curpage , :howmany ",
           {"howmany": howManyNews, "curpage": currentPage}).then(
@@ -39,20 +36,16 @@ class PostData {
     return posts.sublist(currentPage, (currentPage + howManyNews));
   }
 
-  //static Future<List<String?>> getImages(
   static Future<List<String>> getImages(
       {required PostModel post, required MySQLConnectionPool pool}) async {
-    //List<String?> ImgUrls = [];
     List<String> allImages = [];
 
     var resultimages = await pool.execute(
         "SELECT * FROM wp_posts WHERE post_status = 'inherit' and post_type = 'attachment' and post_parent = :pp and (post_mime_type='image/png' or post_mime_type='image/jpeg') ORDER BY `wp_posts`.`post_date` DESC",
         {"pp": post.id});
     for (final row in resultimages.rows) {
-      //ImgUrls.add(row.colByName('guid'));
       allImages.add(row.colByName('guid')!);
     }
-    //print(ImgUrls);
     return allImages;
   }
 }

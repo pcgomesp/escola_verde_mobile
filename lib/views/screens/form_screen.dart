@@ -19,8 +19,8 @@ class _Form_screenState extends State<Form_screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar('Fomulario'),
-      drawer: DrawerAppbar(),
+      appBar: const CustomAppBar('Fomulario'),
+      drawer: const DrawerAppbar(),
       body: WebViewWidget(controller: controller,),
     );
   }

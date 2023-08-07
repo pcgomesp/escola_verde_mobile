@@ -1,4 +1,3 @@
-import 'package:escola_verde_mobile/themes/my_themes.dart';
 import 'package:escola_verde_mobile/views/widgets/event_button.dart';
 import 'package:flutter/material.dart';
 
