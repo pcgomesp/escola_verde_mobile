@@ -109,7 +109,7 @@ class DrawerAppbar extends StatelessWidget {
               Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => const MySQLNews()));
             }),
-            subMenuOption('Notícias Anteriores'),
+            //subMenuOption('Notícias Anteriores'),
           ]),
           const Padding(padding: EdgeInsets.only(top: 7.0)),
           ListTile(
