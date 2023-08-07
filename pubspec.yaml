@@ -47,7 +47,8 @@ dependencies:
   fwfh_url_launcher: ^0.9.0
   mysql_client: ^0.0.27
   flutter_dotenv: ^5.1.0
-  
+  flutter_launcher_icons: "^0.13.1"
+
 
 flutter_native_splash:
   android: true
@@ -59,6 +60,11 @@ flutter_native_splash:
     color: "#ECEBE1"
     image: assets/logo_png_frame.png
   
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon_sem_fundo.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
 
 
 
