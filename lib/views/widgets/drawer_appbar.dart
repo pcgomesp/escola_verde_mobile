@@ -1,6 +1,7 @@
 import 'package:escola_verde_mobile/themes/my_themes.dart';
 import 'package:escola_verde_mobile/views/screens/act_extension_screen.dart';
 import 'package:escola_verde_mobile/views/screens/act_research_screen.dart';
+import 'package:escola_verde_mobile/views/screens/catalog_record.dart';
 import 'package:escola_verde_mobile/views/screens/inst_greenmagazine_screen.dart';
 import 'package:escola_verde_mobile/views/screens/inst_greenroom_screen.dart';
 import 'package:escola_verde_mobile/views/screens/inst_internship_screen.dart';
@@ -9,6 +10,7 @@ import 'package:escola_verde_mobile/views/screens/event_certificate_screen.dart'
 import 'package:flutter/material.dart';
 
 import '../screens/activity_screen.dart';
+import '../screens/ensino_verde_screen.dart';
 import '../screens/inst_nucleus_screen.dart';
 import '../screens/inst_group_screen.dart';
 import '../screens/mysql_news.dart';
@@ -117,7 +119,23 @@ class DrawerAppbar extends StatelessWidget {
             tileColor: MyThemes.colorButton,
             title: const Text('Ensino Verde'),
             titleTextStyle: MyThemes.fontSideMenu(),
-            onTap: () {},
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const EnsinoVerdeScreen()));
+            },
+          ),
+          const Padding(padding: EdgeInsets.only(top: 7.0)),
+          ListTile(
+            shape: roundedShapeTile(),
+            tileColor: MyThemes.colorButton,
+            title: const Text('Sobre'),
+            titleTextStyle: MyThemes.fontSideMenu(),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const CatalogRecord()));
+            },
           )
         ],
       ),
