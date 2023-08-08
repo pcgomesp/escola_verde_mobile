@@ -37,9 +37,10 @@ class CatalogRecord extends StatelessWidget {
                 child: Text(
                   'Título: Escola Verde Mobile'
                   '\n\nWebsite Repositório da Aplicação: github.com/pcgomesp/escola_verde_mobile'
-                  '\n\nAutores: Paulo César Pereira Gomes, Eduardo de Oliveira Pereira Ribeiro, Aurélio José Ribeiro Da Silva, João Paulo Brites Leopoldo'
+                  '\n\nAutores: Paulo César Pereira Gomes, Eduardo de Oliveira Pereira Ribeiro, Aurélio José Ribeiro Da Silva, '
+                  'João Paulo Brites Leopoldo e Prof. Paulo Roberto Ramos (Orientador).'
                   '\n\nPEV - Programa Escola Verde. Núcleo Temático de Educação Ambiental Interdisciplinar.'
-                  '\n\nJuazeiro (BA), Agosto de 2023.'
+                  '\n\nPetrolina (PE), Agosto de 2023.'
                   '\n\nISBN: 978-65-00-76991-3'
                   '\n\nAssuntos: Criação de aplicativo Android para Divulgação e Participação Virtual do Projeto Escola Verde',
                   style: MyThemes.fontTextBody(),
