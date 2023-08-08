@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "escova_verde_mobile" "\0"
+            VALUE "FileDescription", "Network Upp" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "escova_verde_mobile" "\0"
+            VALUE "InternalName", "Network Upp" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
             VALUE "OriginalFilename", "escova_verde_mobile.exe" "\0"
-            VALUE "ProductName", "escova_verde_mobile" "\0"
+            VALUE "ProductName", "Network Upp" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
