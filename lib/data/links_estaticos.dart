@@ -99,11 +99,10 @@ List<LinksModel> links_list = <LinksModel>[
       imageHeight: 12, //isso pode dar b.o
       url: 'https://escolaverde.org/site/?p=54375'),
   LinksModel(
-      titulo: 'CD-Rom do PEV App',
-      imagePath:
-          'https://escolaverde.org/site/wp-content/uploads/2016/01/Premio-inovacao-e-criatividade.jpg',
+      titulo: 'Jogos e Ferramentas',
+      imagePath: 'https://pemd.univasf.edu.br/ensinoverde/images/3956.jpg',
       imageHeight: 12, //isso pode dar b.o
-      url: 'https://escolaverde.org/site/?p=42049'),
+      url: 'https://pemd.univasf.edu.br/ensinoverde/jogos-e-ferramentas.php'),
   LinksModel(
       titulo: 'Ebook "Psicologia Ambiental" ',
       imagePath:
