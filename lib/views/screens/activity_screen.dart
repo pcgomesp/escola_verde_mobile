@@ -37,8 +37,7 @@ class _activity_screenState extends State<activity_screen> {
                 height: MediaQuery.of(context).size.height * 0.25,
                 width: MediaQuery.of(context).size.height * 0.25,
                 decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                        Radius.circular(200))),
+                    borderRadius: BorderRadius.all(Radius.circular(200))),
                 child: Image.asset(
                   'assets/activity_screen.png',
                 ), //ERA PRA FICAR REDONDO
@@ -57,7 +56,7 @@ class _activity_screenState extends State<activity_screen> {
                     ' de plantios de árvores e jardinagem das escolas. Trata-se de disponibilizar as'
                     ' mudas, oferecer treinamento, acompanhamento e orientação para que a escola se torne'
                     ' sustentável na manutenção das ações.',
-                "http://www.escolaverde.univasf.edu.br/?p=1745"), //url
+                "https://escolaverde.org/site/?p=22265"), //url
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
@@ -73,7 +72,7 @@ class _activity_screenState extends State<activity_screen> {
                     ' a saúde humana e para o meio ambiente. As escolas também são incentivadas'
                     ' a adotarem práticas de reciclagem, com a reutilização e re-uso de materiais,'
                     ' bem como através de confecção de artefatos e obras de arte com material reciclado.',
-                "http://www.escolaverde.univasf.edu.br/?p=2367"), //url
+                "https://escolaverde.org/site/?p=20194"), //url
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
@@ -86,7 +85,7 @@ class _activity_screenState extends State<activity_screen> {
                     ' Este grupo se articula com o de Coleta Seletiva e com o de Ambientalização,'
                     ' assim como os demais, a fim de tornas as instituições de ensino eficientes'
                     ' em termos ambientais',
-                "http://www.escolaverde.univasf.edu.br/?p=4240"), //url
+                "https://escolaverde.org/site/?p=1523"), //url
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
@@ -103,7 +102,7 @@ class _activity_screenState extends State<activity_screen> {
                     'com a temática socioambiental. Este grupo também e responsável '
                     'pela elaboração e confecção de material didático, informativo e '
                     'de sensibilização para as escolas e toda comunidade.',
-                "http://www.escolaverde.univasf.edu.br/?p=333"),
+                "https://escolaverde.org/site/?p=22546"),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
@@ -114,7 +113,7 @@ class _activity_screenState extends State<activity_screen> {
                     'nas escolas onde está atuando, para a formação e atualização'
                     ' da equipe PEV, para a formação e capacitação dos professores'
                     ' e eventos externos para a população em geral',
-                "http://www.escolaverde.univasf.edu.br/?page_id=4583"),
+                "https://escolaverde.org/site/?p=3856"),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
@@ -128,7 +127,7 @@ class _activity_screenState extends State<activity_screen> {
                     ' Cuidados com o descarte adequado do lixo, higiene pessoal'
                     ' e do meio, alimentação saudável e com as diversas formas '
                     'de poluição e degradação ambiental que afetam a saúde',
-                "http://www.escolaverde.univasf.edu.br/?p=2576"),
+                "https://escolaverde.org/site/?p=23625"),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
@@ -144,7 +143,7 @@ class _activity_screenState extends State<activity_screen> {
                     'número maior de escolas possam também desenvolver sua produção orgânica'
                     ' de hortaliças, verduras e legumes, livres de poluentes, para que possa'
                     ' servir também na alimentação escola',
-                "http://www.escolaverde.univasf.edu.br/?p=2495"),
+                "https://escolaverde.org/site/?p=18099"),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
@@ -159,7 +158,7 @@ class _activity_screenState extends State<activity_screen> {
                     ' e Qualidade de Vida (COM-VIDA), a partir da participação de alunos,'
                     ' professores, gestores e comunidade, como elemento fundamental para'
                     ' o envolvimento da escola com as temáticas socioambientais.',
-                "http://www.escolaverde.univasf.edu.br/?p=1648"),
+                "https://escolaverde.org/site/?p=21970"),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
@@ -176,7 +175,7 @@ class _activity_screenState extends State<activity_screen> {
                     ' preservação e recuperação do meio ambiente, desenvolvidos em nossa'
                     ' região. Todos os visitantes são acompanhados e participam previamente'
                     ' de uma palestra na instituição visitada',
-                "http://www.escolaverde.univasf.edu.br/?p=2398"),
+                "https://escolaverde.org/site/?p=19992"),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
@@ -187,7 +186,7 @@ class _activity_screenState extends State<activity_screen> {
                     ' dança e outras manifestações artísticas são desenvolvidas'
                     ' na perspectiva da informação e sensibilização sobre as questões'
                     ' socioambientais, tornando-se um importante instrumento político de formação da cidadania.',
-                "http://www.escolaverde.univasf.edu.br/?p=4437"),
+                "https://escolaverde.org/site/?p=24154"),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
@@ -258,7 +257,7 @@ class _activity_screenState extends State<activity_screen> {
                     'físico-estruturais, sanitárias, projetos ambientais em '
                     'andamento, ações de acessibilidade, uso de tecnologias '
                     'da informação, dentre outras informações.',
-                "http://www.escolaverde.univasf.edu.br/?p=2684"),
+                "https://escolaverde.org/site/?p=12567"),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
